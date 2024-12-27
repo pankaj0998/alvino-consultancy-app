@@ -1,1 +1,0 @@
-# alvino-consultancy-app
