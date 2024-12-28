@@ -1,8 +1,8 @@
 import { ServiceCardProps } from './ServiceCard.types';
-import tax from '../../../public/images/tax.png'
-import transaction from '../../../public/images/transaction.png'
-import advisor from '../../../public/images/advisor.png'
-import assurance from '../../../public/images/assurance.png'
+import tax from '/images/tax.png'
+import transaction from '/images/transaction.png'
+import advisor from '/images/advisor.png'
+import assurance from '/images/assurance.png'
 
 export const cardData: ServiceCardProps[] = [
     {

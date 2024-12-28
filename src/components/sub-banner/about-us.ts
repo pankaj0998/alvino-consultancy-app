@@ -1,6 +1,6 @@
 import { SubBannerTypeProps } from "./SubBanner.types";
-import subBannerImage from '../../../public/images/sub-banner.png';
-import linerImage from '../../../public/images/liner.png'
+import subBannerImage from '/images/sub-banner.png';
+import linerImage from '/images/liner.png'
 
 export const aboutUs: SubBannerTypeProps = {
     title: "About Us",

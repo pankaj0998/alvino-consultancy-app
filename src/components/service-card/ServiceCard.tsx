@@ -20,10 +20,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, buttonTex
                 <p className="text-gray-400 mb-6 text-wrap">{description}</p>
                 <button
                     onClick={() => navigate(route)}
-                    className="flex items-center gap-2 pl-4 py-2 bg-white text-black border border-gray-600 rounded-full"
+                    className="flex items-center justify-between w-[150px] h-10 pl-4 bg-white hover:bg-slate-100 text-black border border-gray-custom rounded-full shadow-md transition-all duration-300 ease-in-out"
                 >
-                    {buttonText}
-                    <PiGreaterThanBold className="w-6 h-6 ml-5 flex items-center justify-center bg-gray-500 text-white rounded-full" />
+                    <span className="text-sm font-medium">{buttonText}</span>
+                    <div className="w-10 h-10 flex items-center justify-center bg-gray-description text-white rounded-full hover:bg-gray-500">
+                        <PiGreaterThanBold className="w-5 h-5" />
+                    </div>
                 </button>
 
             </div>
