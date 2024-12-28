@@ -3,4 +3,6 @@ export type SubBannerTypeProps = {
     description: string;
     linerImageUrl?: string;
     backgroundImage: string;
+    buttonBackroundColor?: string;
+    buttonText?: string;
 }
