@@ -11,6 +11,7 @@ export default {
         blue: {
           custom: "#3b97fe",
           title: "#00127f",
+          light: "#E8F4FF",
         },
       },
       borderColor: {

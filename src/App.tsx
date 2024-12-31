@@ -8,15 +8,21 @@ import { aboutUs } from './components/sub-banner/about-us';
 import SubServiceCard from './components/sub-services/SubServiceCard';
 import { subService } from './components/sub-services/sub-service';
 import SubServiceCardGrid from './components/sub-services/SubServiceCardGrid';
+import InformationScreen from './components/information-screen/InformationScreen';
+import { aboutUsInfo } from './components/information-screen/about-info';
+import MissionCard from './components/mission-card/MissionCard';
+import { missionCard } from './components/mission-card/mission-card';
 
 export default function App() {
   return (
     <BrowserRouter>
       <div className="p-0">
-        <SubBanner {...aboutUs} />
+        {/* <SubBanner {...aboutUs} /> */}
         {/* <ServiceCardGrid /> */}
-        <RequestBanner {...callbackform} />
+        {/* <RequestBanner {...callbackform} /> */}
         {/* <SubServiceCardGrid /> */}
+        {/* <InformationScreen {...aboutUsInfo} /> */}
+        <MissionCard {...missionCard} />
       </div>
     </BrowserRouter>
   );
