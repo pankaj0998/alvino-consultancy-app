@@ -18,7 +18,7 @@ const InformationScreen: React.FC<InformationScreenTypeProps> = ({ image, conten
                     <span className="text-sm font-medium  text-blue-500 py-1 px-3 rounded">{content.title.toUpperCase()}</span>
                 </div>
                 <h2 className="text-4xl font-semibold mt-4 text-blue-title">{content.heading}</h2>
-                <p className="text-gray-description font-medium mt-4 leading-relaxed text-gray-description" dangerouslySetInnerHTML={{ __html: content.paragraph }}></p>
+                <p className="text-gray-description font-medium mt-4 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.paragraph }}></p>
 
                 {/* List Items */}
                 <ul className="mt-6 space-y-4">
