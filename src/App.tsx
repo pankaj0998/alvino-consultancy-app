@@ -12,18 +12,23 @@ import InformationScreen from './components/information-screen/InformationScreen
 import { aboutUsInfo } from './components/information-screen/about-info';
 import MissionCard from './components/mission-card/MissionCard';
 import { missionCard } from './components/mission-card/mission-card';
+import HeroSection from './components/hero/Hero';
+import { heroSection } from './components/hero/hero-section';
+import Footer from './components/footer/Footer';
 
 export default function App() {
   return (
     <BrowserRouter>
       <div className="p-0">
+        <HeroSection {...heroSection} />
         {/* <SubBanner {...aboutUs} /> */}
         {/* <ServiceCardGrid /> */}
         {/* <RequestBanner {...callbackform} /> */}
         {/* <SubServiceCardGrid /> */}
         {/* <InformationScreen {...aboutUsInfo} /> */}
-        <MissionCard {...missionCard} />
+        {/* <MissionCard {...missionCard} /> */}
+        <Footer />
       </div>
-    </BrowserRouter>
+    </BrowserRouter >
   );
 }
