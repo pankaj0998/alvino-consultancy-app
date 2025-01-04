@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FaChevronDown, FaChevronRight, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import logo from "/images/logo.png"
-import './Navbar.css'
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
