@@ -3,7 +3,7 @@ import { RequestBannerProps } from "./RequestBanner.types";
 
 const RequestBanner: React.FC<RequestBannerProps> = ({ title, description }) => {
     return (
-        <div className="flex flex-col lg:flex-row justify-between w-full mx-auto lg:p-10 space-x-6">
+        <div className="flex flex-col lg:flex-row justify-between w-full mx-auto lg:py-24 lg:px-16 space-x-6 max-[1024px]:p-10">
             {/* Left Side - Text */}
             <div className="mr-10 ml-7 lg:mb-0 lg:w-1/2">
                 <h2 className="text-black text-4xl font-semibold mb-2">{title}</h2>
@@ -18,7 +18,7 @@ const RequestBanner: React.FC<RequestBannerProps> = ({ title, description }) => 
                     <input
                         type="text"
                         placeholder="Name *"
-                        className="bg-gray-100 rounded-md p-2 w-full outline-none"
+                        className="bg-gray-100 rounded-md p-2 w-full h-12 outline-none"
                     />
                     <input
                         type="email"
@@ -30,7 +30,7 @@ const RequestBanner: React.FC<RequestBannerProps> = ({ title, description }) => 
                         <input
                             type="tel"
                             placeholder="Phone *"
-                            className="bg-gray-50 rounded-md p-2 w-full outline-none"
+                            className="bg-gray-50 rounded-md p-2 w-full h-12 outline-none"
                         />
                         <button
                             type="submit"

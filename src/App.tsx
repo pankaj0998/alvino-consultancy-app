@@ -1,34 +1,18 @@
-import React from 'react';
-import { BrowserRouter } from "react-router-dom";
-import ServiceCardGrid from "./components/service-card/ServiceCardGrid";
-import RequestBanner from './components/request-banner/RequestBanner';
-import { callbackform } from './components/request-banner/request-banner';
-import SubBanner from './components/sub-banner/SubBanner';
-import { aboutUs } from './components/sub-banner/about-us';
-import SubServiceCard from './components/sub-services/SubServiceCard';
-import { subService } from './components/sub-services/sub-service';
-import SubServiceCardGrid from './components/sub-services/SubServiceCardGrid';
-import InformationScreen from './components/information-screen/InformationScreen';
-import { aboutUsInfo } from './components/information-screen/about-info';
-import MissionCard from './components/mission-card/MissionCard';
-import { missionCard } from './components/mission-card/mission-card';
-import HeroSection from './components/hero/Hero';
-import { heroSection } from './components/hero/hero-section';
-import Footer from './components/footer/Footer';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from './pages/Home';
+import AboutUs from './pages/AboutUs';
+import Services from './pages/Services';
+import ComingSoon from "./pages/ComingSoon";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="p-0">
-        <HeroSection {...heroSection} />
-        {/* <SubBanner {...aboutUs} /> */}
-        {/* <ServiceCardGrid /> */}
-        {/* <RequestBanner {...callbackform} /> */}
-        {/* <SubServiceCardGrid /> */}
-        {/* <InformationScreen {...aboutUsInfo} /> */}
-        {/* <MissionCard {...missionCard} /> */}
-        <Footer />
-      </div>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/about-us' element={<AboutUs />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/coming-soon' element={<ComingSoon />} />
+      </Routes>
     </BrowserRouter >
   );
 }

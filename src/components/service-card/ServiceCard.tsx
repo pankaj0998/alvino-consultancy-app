@@ -7,7 +7,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, buttonTex
     const navigate = useNavigate();
 
     return (
-        <div className={`bg-white rounded-lg overflow-hidden mb-8 mx-2 ${className}`}>
+        <div className={`bg-white rounded-lg overflow-hidden mb-12 mx-2 ${className}`}>
             <div className="relative h-48">
                 <img
                     src={imageUrl}
@@ -20,7 +20,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, buttonTex
                 <p className="text-gray-400 mb-6 text-wrap">{description}</p>
                 <button
                     onClick={() => navigate(route)}
-                    className="relative flex items-center justify-between w-[150px] h-10 pl-4 bg-white text-black border rounded-full overflow-hidden group"
+                    className="relative flex items-center justify-between w-[150px] h-10 pl-4 bg-white text-black border  border-gray-description rounded-full overflow-hidden group"
                 >
                     {/* Text */}
                     <span className="text-[12px] font-semibold relative z-10 transition-all duration-300 group-hover:text-white">

@@ -6,12 +6,13 @@ import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaPinterestP } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import React from 'react';
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     return (
-        <footer className="bg-gray-dark w-full">
+        <footer className="bg-gray-dark w-full py-10">
             {/* Footer Section */}
-            <div className="container mx-auto max-[600px]:px-10 max-[1024px]: px-10 grid grid-col-1 md:grid-cols-12 md:gap-8 py-10">
+            <div className="container mx-auto max-[600px]:px-10 max-[1024px]: px-10 grid grid-col-1 md:grid-cols-12 lg:gap-8 py-10">
                 {/* Left Section */}
                 <div className='md:col-span-4'>
                     <div className="flex items-center space-x-2 mb-4">

@@ -11,7 +11,7 @@ const SubBanner: React.FC<SubBannerTypeProps> = ({
 }) => {
     return (
         <div
-            className={`bg-cover bg-center w-full ${!buttonText ? 'h-[300px]' : 'h-[400px]'} max-[700px]:${!buttonText ? 'h-[100px]' : 'h-[200px]'} flex items-center text-white pl-10 max-[600px]:p-0`}
+            className={`bg-cover bg-center w-full ${!buttonText ? 'h-[300px]' : 'h-[400px]'} max-[700px]:${!buttonText ? 'h-[100px]' : 'h-[200px]'} flex items-center text-white pl-10 max-[600px]:p-0 max-[1024px]:mt-10`}
             style={{ backgroundImage: `url(${backgroundImage})` }}
         >
 

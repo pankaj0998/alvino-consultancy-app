@@ -13,7 +13,7 @@ const InformationScreen: React.FC<InformationScreenTypeProps> = ({ image, conten
                 />
             </div>
             {/* Content Section */}
-            <div className="w-full md:w-1/2 p-6 mt-8">
+            <div className="w-full md:w-1/2 lg:p-6 mt-8">
                 <div className=" flex justify-center rounded bg-blue-light w-fit">
                     <span className="text-sm font-medium  text-blue-500 py-1 px-3 rounded">{content.title.toUpperCase()}</span>
                 </div>

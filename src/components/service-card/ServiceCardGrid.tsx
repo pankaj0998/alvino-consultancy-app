@@ -1,11 +1,12 @@
 // Assuming cardData is exported from ServiceCard.tsx
-import { cardData } from './service-card';
+import React from 'react';
 import ServiceCard from './ServiceCard';
+import { ServiceCardGridProps } from './ServiceCard.types';
 
-const ServiceCardGrid = () => {
+const ServiceCardGrid: React.FC<ServiceCardGridProps> = ({ cards }) => {
     return (
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:px-10`}>
-            {cardData.map((card, index) => (
+            {cards.map((card, index) => (
                 <ServiceCard
                     key={index}
                     title={card.title}
