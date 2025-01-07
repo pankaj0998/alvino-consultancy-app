@@ -6,9 +6,9 @@ const SubServiceCard: React.FC<CardProps> = ({ image, title, description, cardDa
     const [showMore, setShowMore] = useState(false);
 
     return (
-        <div className="w-full rounded-lg overflow-hidden shadow-lg max-h-max">
+        <div className="w-full rounded-lg overflow-hidden shadow-lg max-h-max pt-6">
             {/* Image Section */}
-            <img className="w-full h-48 object-cover" src={image ?? businessImage} alt="Card Image" />
+            <img className="w-full h-48 object-cover rounded-t-lg" src={image ?? businessImage} alt="Card Image" />
 
             {/* Content Section */}
             <div className={`max-[600px]:p-4 bg-gray-custom ${cardData && description ? 'p-6' : 'px-6 pt-6 pb-0'}`}>

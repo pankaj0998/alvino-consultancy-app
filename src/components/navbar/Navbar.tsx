@@ -41,7 +41,7 @@ const Navbar = () => {
             dropdown: [
                 {
                     name: DropDown.TRS,
-                    link: "",
+                    link: "/services/tax-regulatory-services",
                     subDropdown: [
                         { name: SubDropDown.BTRC },
                         { name: SubDropDown.IO },
@@ -51,10 +51,10 @@ const Navbar = () => {
                     ]
                 },
                 {
-                    name: DropDown.AS, link: '#',
+                    name: DropDown.AS, link: '/services/tax-regulatory-services',
                 },
-                { name: DropDown.TD, link: '/' },
-                { name: DropDown.ARS, link: '/' }
+                { name: DropDown.TD, link: '/services/tax-regulatory-services' },
+                { name: DropDown.ARS, link: '/services/tax-regulatory-services' }
             ]
         },
         { name: 'Insights', link: '/insights' },
