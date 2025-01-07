@@ -2,15 +2,34 @@ import React, { useEffect, useRef, useState } from 'react';
 import { FaChevronDown, FaChevronRight, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import logo from "/images/logo.png"
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import Modal from '../modal/Modal';
+import { DropDown, SubDropDown } from './navbar-menu';
+import { subService } from '../sub-services/sub-service';
 
 const Navbar = () => {
     const [openDropdown, setOpenDropdown] = useState(null);
     const [openSubDropdown, setOpenSubDropdown] = useState(null);
     const navbarRef = useRef<any>(null);
     const [nav, setNav] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [modalContent, setModalContent] = useState({});
+
+    const toggleModal = () => {
+        setIsOpen(!isOpen);
+        setOpenDropdown(null);
+        setOpenSubDropdown(null);
+    };
 
     const handleNav = () => {
         setNav(!nav);
+    };
+
+    const handleSubDropdownClick = (subMenu: string) => {
+        // Find the corresponding subService data based on the title (name)
+        const serviceData = subService.find(service => service.title === subMenu);
+        if (serviceData) {
+            setModalContent(serviceData);
+        }
     };
 
     const menuItems = [
@@ -21,21 +40,21 @@ const Navbar = () => {
             link: '/services',
             dropdown: [
                 {
-                    name: 'Tax & Regulatory Services',
+                    name: DropDown.TRS,
                     link: "",
                     subDropdown: [
-                        { name: 'Business Tax & Regulatory Compliance', link: '/' },
-                        { name: 'India Inbound & Outbound', link: '/' },
-                        { name: 'Indirect Tax & Gst', link: '/' },
-                        { name: 'Litigation Support & Tax Disputes', link: '/' },
-                        { name: 'Tax Manage Service', link: '/' }
+                        { name: SubDropDown.BTRC },
+                        { name: SubDropDown.IO },
+                        { name: SubDropDown.ITS },
+                        { name: SubDropDown.LSTD },
+                        { name: SubDropDown.TMS }
                     ]
                 },
                 {
-                    name: 'Advisory Services', link: '#',
+                    name: DropDown.AS, link: '#',
                 },
-                { name: 'Transactions & Deals', link: '/' },
-                { name: 'Assurance Services', link: '/' }
+                { name: DropDown.TD, link: '/' },
+                { name: DropDown.ARS, link: '/' }
             ]
         },
         { name: 'Insights', link: '/insights' },
@@ -109,7 +128,7 @@ const Navbar = () => {
                                 {item.dropdown && openDropdown === index && (
                                     <ul className="absolute left-0 mt-5 min-w-72 bg-white shadow-lg rounded-md">
                                         {item.dropdown.map((dropdownItem, subIndex) => (
-                                            <li key={subIndex} className="hover:text-blue-title text-gray-description font-normal text-base relative">
+                                            <li key={subIndex} className="hover:text-blue-title text-gray-description font-medium text-base relative">
                                                 <div className='flex items-center justify-between pl-8 py-2 hover:bg-blue-light'>
                                                     <a href={dropdownItem.link || "#"}>
                                                         {dropdownItem.name}
@@ -130,15 +149,16 @@ const Navbar = () => {
                                                 </div>
                                                 {/* Sub Dropdown */}
                                                 {dropdownItem.subDropdown && openSubDropdown === subIndex && (
-                                                    <ul className="absolute left-full top-0 mt-0 w-64 bg-white shadow-lg rounded-md overflow-hidden">
+                                                    <ul className="absolute left-full top-0 mt-0 w-72 bg-white shadow-lg rounded-md overflow-hidden ">
                                                         {dropdownItem.subDropdown.map((subItem, subSubIndex) => (
-                                                            <li key={subSubIndex} className="text-gray-description hover:text-blue-title hover:bg-blue-light">
-                                                                <a
-                                                                    href={subItem.link || '#'}
-                                                                    className="block px-4 py-2 truncate w-full"
-                                                                >
+                                                            <li key={subSubIndex} className="text-gray-description hover:text-blue-title hover:bg-blue-light font-normal truncate" onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                toggleModal();
+                                                                handleSubDropdownClick(subItem.name)
+                                                            }}>
+                                                                <div className='flex items-center justify-between px-2 py-2 hover:bg-blue-light cursor-pointer truncate'>
                                                                     {subItem.name}
-                                                                </a>
+                                                                </div>
                                                             </li>
                                                         ))}
                                                     </ul>
@@ -200,13 +220,12 @@ const Navbar = () => {
                                                 {dropdownItem.subDropdown && openSubDropdown === subIndex && (
                                                     <ul className="bg-white shadow-lg rounded-md pl-4">
                                                         {dropdownItem.subDropdown.map((subItem, subSubIndex) => (
-                                                            <li key={subSubIndex} className="text-gray-description hover:text-blue-title">
-                                                                <a
-                                                                    href={subItem.link || '#'}
-                                                                    className="block px-4 py-2 w-full"
-                                                                >
-                                                                    {subItem.name}
-                                                                </a>
+                                                            <li key={subSubIndex} className="text-gray-description px-2 py-2 hover:text-blue-title truncate cursor-pointer" onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                toggleModal();
+                                                                handleSubDropdownClick(subItem.name);
+                                                            }}>
+                                                                {subItem.name}
                                                             </li>
                                                         ))}
                                                     </ul>
@@ -220,6 +239,12 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
+
+            {/* Modal Component */}
+            <div className='flex items-center justify-center'>
+                <Modal isOpen={isOpen} toggler={toggleModal} content={modalContent} />
+            </div>
+
         </div >
     );
 };

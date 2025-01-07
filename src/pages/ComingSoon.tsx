@@ -1,6 +1,8 @@
 const ComingSoon = () => {
     return (
-        <div></div>
+        <div className="container">
+
+        </div>
     )
 }
 

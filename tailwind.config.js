@@ -29,6 +29,9 @@ export default {
           youtube: "#FF0000",
           pinterest: "#E60023",
         },
+        brown: {
+          custom: "#786060",
+        },
       },
     },
   },

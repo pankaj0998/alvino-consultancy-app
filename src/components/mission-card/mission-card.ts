@@ -1,5 +1,5 @@
 import { MissionCardTypeProps } from "./MissionCard.types";
-import missionBackgroundImage from '../../../public/images/mission-background.png'
+import missionBackgroundImage from '/images/mission-background.png'
 
 export const missionCard: MissionCardTypeProps = {
     title: "MISSION",
