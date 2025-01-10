@@ -12,7 +12,7 @@ export const cardData: ServiceCardGridProps = {
             buttonText: "VIEW ALL",
             imageUrl: tax,
             className: "service-card",
-            route: "",
+            route: "/services/tax-regulatory-services",
             style: {},
         },
         {
@@ -21,7 +21,7 @@ export const cardData: ServiceCardGridProps = {
             buttonText: "VIEW ALL",
             imageUrl: transaction,
             className: "service-card",
-            route: "",
+            route: "/services/advisory-services",
             style: {},
         },
         {
@@ -30,7 +30,7 @@ export const cardData: ServiceCardGridProps = {
             buttonText: "VIEW ALL",
             imageUrl: advisor,
             className: "service-card",
-            route: "",
+            route: "/services/transaction-deals",
             style: {},
         },
         {
@@ -39,7 +39,7 @@ export const cardData: ServiceCardGridProps = {
             buttonText: "VIEW ALL",
             imageUrl: assurance,
             className: "service-card",
-            route: "",
+            route: "/services/assurance-services",
             style: {},
         }
     ]

@@ -4,6 +4,9 @@ import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import ComingSoon from "./pages/ComingSoon";
 import TaxRegulatoryPage from "./pages/sub-pages/Tax-Regulatory";
+import AdvisoryPage from "./pages/sub-pages/Advisory";
+import TransactionDeals from "./pages/sub-pages/Transaction-Deals";
+import AssurancePage from "./pages/sub-pages/Assurance";
 
 export default function App() {
   return (
@@ -14,6 +17,9 @@ export default function App() {
         <Route path='/services' element={<Services />} />
         <Route path='/coming-soon' element={<ComingSoon />} />
         <Route path="/services/tax-regulatory-services" element={<TaxRegulatoryPage />} />
+        <Route path="/services/advisory-services" element={<AdvisoryPage />} />
+        <Route path="/services/transaction-deals" element={<TransactionDeals />} />
+        <Route path="/services/assurance-services" element={<AssurancePage />} />
       </Routes>
     </BrowserRouter >
   );

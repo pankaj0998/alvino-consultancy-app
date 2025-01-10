@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { CardProps } from "./SubServiceCard.types";
-import businessImage from '/images/business-tax.png'
+import businessImage from '/images/tax-regulatory/business-tax.png'
 
-const SubServiceCard: React.FC<CardProps> = ({ image, title, description, cardData = [] }) => {
+const SubServiceCard: React.FC<CardProps> = ({ image, title, description, cardData = [], toggler, isButtonRequired = false }) => {
     const [showMore, setShowMore] = useState(false);
 
     return (
-        <div className="w-full rounded-lg overflow-hidden shadow-lg max-h-max pt-6">
+        <div className="w-full rounded-lg shadow-lg mb:mt-6 text bg-gray-custom">
             {/* Image Section */}
             <img className="w-full h-48 object-cover rounded-t-lg" src={image ?? businessImage} alt="Card Image" />
 
             {/* Content Section */}
-            <div className={`max-[600px]:p-4 bg-gray-custom ${cardData && description ? 'p-6' : 'px-6 pt-6 pb-0'}`}>
+            <div className={`md:max-h-full max-[600px]:p-4 ${cardData && description ? 'p-6' : 'px-6 pt-6 pb-0'}`}>
                 <h2 className="text-xl max-[600px]:text-[16px] font-bold text-blue-title mb-2">{title ?? "Title"}</h2>
 
                 {/* Optional Description */}
@@ -42,6 +42,22 @@ const SubServiceCard: React.FC<CardProps> = ({ image, title, description, cardDa
                         {showMore ? 'SHOW LESS' : 'SHOW MORE'}
                     </button>
                 )}
+
+                {/* Button Container */}
+                {isButtonRequired && <div className={`flex justify-center items-center mt-4 ${cardData ? 'pb-5' : 'pb-1'}`}>
+                    <button
+                        className="relative flex justify-center items-center w-[150px] h-10 text-gray-description border border-gray-description rounded-full overflow-hidden group"
+                        onClick={toggler}
+                    >
+                        {/* Text */}
+                        <span className="text-[12px] uppercase font-semibold relative z-10 transition-all duration-300 group-hover:text-white">
+                            CLOSE
+                        </span>
+
+                        {/* Hover Effect */}
+                        <span className="absolute right-0 h-full bg-gray-description w-0 transition-all duration-300 ease-out group-hover:w-full rounded-full hover:border hover:border-gray-description"></span>
+                    </button>
+                </div>}
             </div>
         </div>
     );

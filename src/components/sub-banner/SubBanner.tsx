@@ -16,7 +16,7 @@ const SubBanner: React.FC<SubBannerTypeProps> = ({
         >
 
             {/* Content */}
-            <div className="relative z-10 px-8 w-full md:w-2/3">
+            <div className="relative z-10 px-8 w-full">
                 <div className="flex items-center gap-2">
                     {/* Vertical Line Image */}
                     {linerImageUrl && (
@@ -29,7 +29,7 @@ const SubBanner: React.FC<SubBannerTypeProps> = ({
                     <h2 className="text-4xl max-[600px]:text-[24px] font-bold">{title}</h2>
                 </div>
                 {/* Description */}
-                <p className="mt-4 pl-4 text-gray-300 max-[600px]:text-[14px]">{description}</p>
+                <p className="mt-4 pl-4 text-gray-300 max-[600px]:text-[14px] w-full">{description}</p>
                 {buttonText && (
                     <div className='mt-14 pl-4'>
                         <button

@@ -7,13 +7,15 @@ import RequestBanner from "../request-banner/RequestBanner";
 import { subService } from "../sub-services/sub-service";
 import SubServiceCardGrid from "../sub-services/SubServiceCardGrid";
 import { DropDownProps } from "./DropDownProps";
+import SubBanner from "../sub-banner/SubBanner";
 
-const DropDownMenu: React.FC<DropDownProps> = ({ cards, elements, separator }) => {
+const DropDownMenu: React.FC<DropDownProps> = ({ cards, elements, separator, subBanner }) => {
     return (
         <>
             <Navbar />
-            <Breadcrumb elements={elements} separator="/" />
-            <SubServiceCardGrid cards={subService} />
+            <SubBanner {...subBanner} />
+            <Breadcrumb elements={elements} separator={separator} />
+            <SubServiceCardGrid cards={cards} />
             <RequestBanner {...callbackform} />
             <Footer />
         </>

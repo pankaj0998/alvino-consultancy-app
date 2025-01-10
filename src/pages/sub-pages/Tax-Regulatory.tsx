@@ -1,5 +1,6 @@
 import DropDownMenu from "../../components/drop-down/DropDown"
 import { DropDown } from "../../components/navbar/navbar-menu";
+import { taxAndRegulatory } from "../../components/sub-banner/sub-service-list";
 import { subService } from "../../components/sub-services/sub-service"
 
 const TaxRegulatoryPage = () => {
@@ -8,7 +9,7 @@ const TaxRegulatoryPage = () => {
         { content: "Services", link: "/services" },
         { content: DropDown.TRS, link: "/services/tax-regulatory-services" }
     ];
-    return (<DropDownMenu cards={subService} elements={elements} separator="/" />)
+    return (<DropDownMenu cards={subService} elements={elements} separator="/" subBanner={taxAndRegulatory} />)
 }
 
 export default TaxRegulatoryPage

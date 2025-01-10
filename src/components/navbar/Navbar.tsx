@@ -3,8 +3,8 @@ import { FaChevronDown, FaChevronRight, FaPhoneAlt, FaEnvelope } from 'react-ico
 import logo from "/images/logo.png"
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Modal from '../modal/Modal';
-import { DropDown, SubDropDown } from './navbar-menu';
-import { subService } from '../sub-services/sub-service';
+import { Advisory, Assurance, DropDown, TaxAndRegulatory, TransactionDeals } from './navbar-menu';
+import { advisoryService, assuranceService, subService, transactionDealsService } from '../sub-services/sub-service';
 
 const Navbar = () => {
     const [openDropdown, setOpenDropdown] = useState(null);
@@ -24,9 +24,22 @@ const Navbar = () => {
         setNav(!nav);
     };
 
-    const handleSubDropdownClick = (subMenu: string) => {
+    const handleSubDropdownClick = (subMenu: string, serviceName: string) => {
         // Find the corresponding subService data based on the title (name)
-        const serviceData = subService.find(service => service.title === subMenu);
+        let service: any[] = []
+        if (serviceName === DropDown.TRS) {
+            service = subService
+        }
+        else if (serviceName === DropDown.AS) {
+            service = advisoryService
+        }
+        else if (serviceName === DropDown.ARS) {
+            service = assuranceService
+        }
+        else if (serviceName === DropDown.TD) {
+            service = transactionDealsService
+        }
+        const serviceData = service.find(service => service.title === subMenu);
         if (serviceData) {
             setModalContent(serviceData);
         }
@@ -43,23 +56,46 @@ const Navbar = () => {
                     name: DropDown.TRS,
                     link: "/services/tax-regulatory-services",
                     subDropdown: [
-                        { name: SubDropDown.BTRC },
-                        { name: SubDropDown.IO },
-                        { name: SubDropDown.ITS },
-                        { name: SubDropDown.LSTD },
-                        { name: SubDropDown.TMS }
+                        { name: TaxAndRegulatory.BTRC },
+                        { name: TaxAndRegulatory.IO },
+                        { name: TaxAndRegulatory.TPCBA },
+                        { name: TaxAndRegulatory.ITS },
+                        { name: TaxAndRegulatory.LSTD },
+                        { name: TaxAndRegulatory.TMS }
                     ]
                 },
                 {
-                    name: DropDown.AS, link: '/services/tax-regulatory-services',
+                    name: DropDown.AS, link: '/services/advisory-services',
+                    subDropdown: [
+                        { name: Advisory.BC },
+                        { name: Advisory.WRC },
+                        { name: Advisory.SC },
+                        { name: Advisory.IQAS },
+                        { name: Advisory.ED }
+                    ]
                 },
-                { name: DropDown.TD, link: '/services/tax-regulatory-services' },
-                { name: DropDown.ARS, link: '/services/tax-regulatory-services' }
+                {
+                    name: DropDown.TD, link: '/services/transaction-deals',
+                    subDropdown: [
+                        { name: TransactionDeals.IACBT },
+                        { name: TransactionDeals.DDTS },
+                        { name: TransactionDeals.VS },
+                        { name: TransactionDeals.DRTS },
+                    ]
+                },
+                {
+                    name: DropDown.ARS, link: '/services/assurance-services',
+                    subDropdown: [
+                        { name: Assurance.FAA },
+                        { name: Assurance.FAFD },
+                        { name: Assurance.AAIS },
+                    ]
+                }
             ]
         },
-        { name: 'Insights', link: '/insights' },
-        { name: 'Careers', link: '/careers' },
-        { name: 'Contact Us', link: '/contact' }
+        { name: 'Insights', link: '/' },
+        { name: 'Careers', link: '/' },
+        { name: 'Contact Us', link: '/' }
     ];
 
     const toggleDropdown = (index: any) => {
@@ -154,7 +190,7 @@ const Navbar = () => {
                                                             <li key={subSubIndex} className="text-gray-description hover:text-blue-title hover:bg-blue-light font-normal truncate" onClick={(e) => {
                                                                 e.stopPropagation();
                                                                 toggleModal();
-                                                                handleSubDropdownClick(subItem.name)
+                                                                handleSubDropdownClick(subItem.name, dropdownItem.name)
                                                             }}>
                                                                 <div className='flex items-center justify-between px-2 py-2 hover:bg-blue-light cursor-pointer truncate'>
                                                                     {subItem.name}
@@ -223,7 +259,7 @@ const Navbar = () => {
                                                             <li key={subSubIndex} className="text-gray-description px-2 py-2 hover:text-blue-title truncate cursor-pointer" onClick={(e) => {
                                                                 e.stopPropagation();
                                                                 toggleModal();
-                                                                handleSubDropdownClick(subItem.name);
+                                                                handleSubDropdownClick(subItem.name, dropdownItem.name);
                                                             }}>
                                                                 {subItem.name}
                                                             </li>

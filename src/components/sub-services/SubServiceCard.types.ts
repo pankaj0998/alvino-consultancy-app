@@ -8,6 +8,9 @@ export type CardProps = {
     title: string;
     description?: string;
     cardData?: CardData[];
+    isButtonRequired: boolean,
+    toggler?: () => void;
+
 }
 
 export type CardGridProps = {
