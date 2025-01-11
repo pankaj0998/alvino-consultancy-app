@@ -6,6 +6,8 @@ import MissionCard from "../components/mission-card/MissionCard";
 import Navbar from "../components/navbar/Navbar";
 import { aboutUs } from "../components/sub-banner/about-us";
 import SubBanner from "../components/sub-banner/SubBanner";
+import { teamContent } from "../components/team/team-info";
+import TeamInfoGrid from "../components/team/TeamInfoGrid";
 
 const AboutUs = () => {
     return (
@@ -18,6 +20,7 @@ const AboutUs = () => {
                 <InformationScreen {...aboutUsInfo} />
             </div>
             <MissionCard {...missionCard} />
+            <TeamInfoGrid {...teamContent} />
             <Footer />
         </>
     )

@@ -12,7 +12,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, buttonTex
                 <img
                     src={imageUrl}
                     alt={title}
-                    className="w-full h-full object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110"
                 />
             </div>
             <div className="pt-3">
@@ -29,7 +29,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, buttonTex
 
                     {/* Arrow Icon */}
                     <div className="w-10 h-10 flex items-center justify-center bg-gray-description text-white rounded-full relative z-10">
-                        <PiGreaterThanBold className="w-5 h-5" />
+                        <PiGreaterThanBold className="w-5 h-3" />
                     </div>
 
                     {/* Hover Effect */}

@@ -1,10 +1,26 @@
 import { InfoCardTypeProps, SocialMedia } from "./InforCard.types";
-import founder from '/images/founder.avif'
+import ankurShah from '/images/team/ankur-shah.png'
 
-export const infoCard: InfoCardTypeProps = {
+export const ankurShahInfo: InfoCardTypeProps = {
     name: "Ankur Shah",
     position: "Founder",
-    image: founder,
+    image: ankurShah,
+    socialMedia: [
+        {
+            type: SocialMedia.GMAIL,
+            url: ""
+        },
+        {
+            type: SocialMedia.LINKEDIN,
+            url: ""
+        }
+    ]
+}
+
+export const bhaveshMehtaInfo: InfoCardTypeProps = {
+    name: "Bhavesh Mehta",
+    position: "Founder",
+    image: ankurShah,
     socialMedia: [
         {
             type: SocialMedia.GMAIL,
