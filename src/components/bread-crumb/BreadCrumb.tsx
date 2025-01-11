@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 const Breadcrumb: React.FC<BreadCrumbProps> = ({ elements, separator = "→" }) => {
     return (
-        <div className="flex items-center px-10 mt-5 ml-10">
+        <div className="flex items-center md:px-10 mt-5 ml-10">
             {elements.map((element, index) => (
                 <React.Fragment key={index}>
                     {/* Check if element has a link */}
                     {element.link ? (
-                        <Link to={element.link} className={`${(index === elements.length - 1) ? 'text-blue-custom' : 'text-black'} font-xs hover:underline`}>
+                        <Link to={element.link} className={`${(index === elements.length - 1) ? 'text-blue-custom' : 'text-black'} text-xs hover:underline`}>
                             {element.content}
                         </Link>
                     ) : (
