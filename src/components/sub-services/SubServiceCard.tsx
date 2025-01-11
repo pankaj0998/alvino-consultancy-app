@@ -36,7 +36,7 @@ const SubServiceCard: React.FC<CardProps> = ({ image, title, description, cardDa
                 {/* Show More Button */}
                 {cardData.length > 1 && (
                     <button
-                        className="text-blue-custom focus:outline-none text-xs pb-5 lowercase hover:no-underline"
+                        className="text-blue-custom focus:outline-none text-sm pb-5 lowercase hover:no-underline"
                         onClick={() => setShowMore(!showMore)}
                     >
                         {showMore ? 'VIEW LESS' : 'VIEW MORE'}

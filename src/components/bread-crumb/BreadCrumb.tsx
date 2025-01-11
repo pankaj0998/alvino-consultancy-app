@@ -9,7 +9,7 @@ const Breadcrumb: React.FC<BreadCrumbProps> = ({ elements, separator = "→" }) 
                 <React.Fragment key={index}>
                     {/* Check if element has a link */}
                     {element.link ? (
-                        <Link to={element.link} className={`${(index === elements.length - 1) ? 'text-blue-custom' : 'text-black'} text-xs hover:underline`}>
+                        <Link to={element.link} className={`${(index === elements.length - 1) ? 'text-blue-custom' : 'text-black'} text-sm hover:underline`}>
                             {element.content}
                         </Link>
                     ) : (
