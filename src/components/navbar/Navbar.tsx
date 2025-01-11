@@ -124,7 +124,7 @@ const Navbar = () => {
         <div ref={navbarRef}>
             {/* Top Bar */}
             <div className="bg-blue-title text-gray-custom lg:flex justify-end items-center px-6 py-2 hidden">
-                <div className="flex items-center md:space-x-4 flex-wrap">
+                <div className="flex items-center md:space-x-10 flex-wrap text-sm">
                     <div className="flex items-center space-x-2 max-[600px]:mr-2">
                         <FaPhoneAlt />
                         <span>+91 82453 2652</span>
@@ -149,7 +149,7 @@ const Navbar = () => {
                                 <div className='flex items-center justify-center space-x-2'>
                                     <a
                                         href={item.link || '#'}
-                                        className="hover:text-blue-title flex items-center text-gray-description font-semibold"
+                                        className="hover:text-blue-title flex items-center text-gray-description font-semibold transform transition-all duration-300 ease-in-out hover:scale-125" // Add zoom effect on hover
                                     >
                                         {item.name}
                                     </a>
@@ -166,7 +166,7 @@ const Navbar = () => {
                                         {item.dropdown.map((dropdownItem, subIndex) => (
                                             <li key={subIndex} className="hover:text-blue-title text-gray-description font-medium text-base relative">
                                                 <div className='flex items-center justify-between pl-8 py-2 hover:bg-blue-light'>
-                                                    <a href={dropdownItem.link || "#"}>
+                                                    <a href={dropdownItem.link || "#"} className='transform transition-all duration-300 ease-in-out hover:scale-110'>
                                                         {dropdownItem.name}
                                                     </a>
                                                     <div
@@ -187,12 +187,12 @@ const Navbar = () => {
                                                 {dropdownItem.subDropdown && openSubDropdown === subIndex && (
                                                     <ul className="absolute left-full top-0 mt-0 w-72 bg-white shadow-lg rounded-md overflow-hidden ">
                                                         {dropdownItem.subDropdown.map((subItem, subSubIndex) => (
-                                                            <li key={subSubIndex} className="text-gray-description hover:text-blue-title hover:bg-blue-light font-normal truncate" onClick={(e) => {
+                                                            <li key={subSubIndex} className="text-gray-description hover:text-blue-title hover:bg-blue-light font-normal" onClick={(e) => {
                                                                 e.stopPropagation();
                                                                 toggleModal();
                                                                 handleSubDropdownClick(subItem.name, dropdownItem.name)
                                                             }}>
-                                                                <div className='flex items-center justify-between px-2 py-2 hover:bg-blue-light cursor-pointer truncate'>
+                                                                <div className='flex items-center justify-between px-2 py-2 hover:bg-blue-light cursor-pointer truncate whitespace-nowrap overflow-hidden'>
                                                                     {subItem.name}
                                                                 </div>
                                                             </li>
