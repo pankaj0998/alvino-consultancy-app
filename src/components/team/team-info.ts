@@ -27,6 +27,6 @@ Over the years, Bhavesh has developed and achieved comprehensive experience in f
 
 export const teamContent: TeamInfoGridProps = {
     tagline: "Expert Team",
-    heading: "Our Dedicated Team Members",
+    heading: "Core Team",
     teamInfo: teamInformation
 }

@@ -11,7 +11,7 @@ const SubServiceCard: React.FC<CardProps> = ({ image, title, description, cardDa
             <img className="w-full h-48 object-cover rounded-t-lg" src={image ?? businessImage} alt="Card Image" />
 
             {/* Content Section */}
-            <div className={`md:max-h-full max-[600px]:p-4 ${cardData && description ? 'p-6' : 'px-6 pt-6 pb-0'}`}>
+            <div className={`md:max-h-full max-[600px]:p-4 ${cardData && description ? 'px-6 pt-6 pb-0' : 'px-6 pt-6 pb-0'}`}>
                 <h2 className="text-xl max-[600px]:text-[16px] font-bold text-blue-title mb-2">{title ?? "Title"}</h2>
 
                 {/* Optional Description */}
