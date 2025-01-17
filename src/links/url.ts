@@ -6,5 +6,6 @@ export const urls = {
     advisoryService: '/services/advisory-services',
     transactionDealService: '/services/transaction-deals',
     assuranceService: '/services/assurance-services',
-    contactUs: '/contact-us'
+    contactUs: '/contact-us',
+    comingSoon: '/coming-soon'
 }

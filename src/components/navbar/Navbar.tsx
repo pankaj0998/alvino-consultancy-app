@@ -95,8 +95,8 @@ const Navbar = () => {
                 }
             ]
         },
-        { name: 'Insights', link: '/' },
-        { name: 'Careers', link: '/' },
+        { name: 'Insights', link: urls.comingSoon },
+        { name: 'Careers', link: urls.comingSoon },
         { name: 'Contact Us', link: urls.contactUs }
     ];
 
