@@ -3,6 +3,7 @@ import tax from '/images/tax.png'
 import transaction from '/images/transaction.png'
 import advisor from '/images/advisor.png'
 import assurance from '/images/assurance.png'
+import { urls } from '../../links/url';
 
 export const cardData: ServiceCardGridProps = {
     cards: [
@@ -12,7 +13,7 @@ export const cardData: ServiceCardGridProps = {
             buttonText: "VIEW ALL",
             imageUrl: tax,
             className: "service-card",
-            route: "/services/tax-regulatory-services",
+            route: urls.taxRegulatoryService,
             style: {},
         },
         {
@@ -21,7 +22,7 @@ export const cardData: ServiceCardGridProps = {
             buttonText: "VIEW ALL",
             imageUrl: transaction,
             className: "service-card",
-            route: "/services/advisory-services",
+            route: urls.advisoryService,
             style: {},
         },
         {
@@ -30,7 +31,7 @@ export const cardData: ServiceCardGridProps = {
             buttonText: "VIEW ALL",
             imageUrl: advisor,
             className: "service-card",
-            route: "/services/transaction-deals",
+            route: urls.transactionDealService,
             style: {},
         },
         {
@@ -39,7 +40,7 @@ export const cardData: ServiceCardGridProps = {
             buttonText: "VIEW ALL",
             imageUrl: assurance,
             className: "service-card",
-            route: "/services/assurance-services",
+            route: urls.assuranceService,
             style: {},
         }
     ]

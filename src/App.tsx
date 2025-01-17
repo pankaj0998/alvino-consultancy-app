@@ -6,18 +6,19 @@ import TaxRegulatoryPage from "./pages/sub-pages/Tax-Regulatory";
 import AdvisoryPage from "./pages/sub-pages/Advisory";
 import TransactionDeals from "./pages/sub-pages/Transaction-Deals";
 import AssurancePage from "./pages/sub-pages/Assurance";
+import { urls } from "./links/url";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/about-us' element={<AboutUs />} />
-        <Route path='/services' element={<Services />} />
-        <Route path="/services/tax-regulatory-services" element={<TaxRegulatoryPage />} />
-        <Route path="/services/advisory-services" element={<AdvisoryPage />} />
-        <Route path="/services/transaction-deals" element={<TransactionDeals />} />
-        <Route path="/services/assurance-services" element={<AssurancePage />} />
+        <Route path={urls.home} element={<HomePage />} />
+        <Route path={urls.aboutus} element={<AboutUs />} />
+        <Route path={urls.services} element={<Services />} />
+        <Route path={urls.taxRegulatoryService} element={<TaxRegulatoryPage />} />
+        <Route path={urls.advisoryService} element={<AdvisoryPage />} />
+        <Route path={urls.transactionDealService} element={<TransactionDeals />} />
+        <Route path={urls.assuranceService} element={<AssurancePage />} />
       </Routes>
     </BrowserRouter >
   );

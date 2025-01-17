@@ -1,70 +1,76 @@
-import footerLogo from '/images/footer-logo.png';
-import { FiPhoneCall } from "react-icons/fi";
-import { HiOutlineClock } from "react-icons/hi";
+import footerLogo from '/images/footerLogo.png'
 import { FaFacebookF } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaPinterestP } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import React from 'react';
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { urls } from '../../links/url';
 
 export const Footer: React.FC = () => {
     return (
-        <footer className="bg-gray-dark w-full py-10">
+        <footer className="bg-gray-custom w-full py-10">
             {/* Footer Section */}
-            <div className="container mx-auto max-[600px]:px-10 max-[1024px]: px-10 grid grid-col-1 md:grid-cols-12 lg:gap-8 py-10">
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 px-6 md:px-6 lg:px-10">
                 {/* Left Section */}
-                <div className='md:col-span-4'>
-                    <div className="flex items-center space-x-2 mb-4">
-                        <img src={footerLogo} alt="Footer Logo" />
+                <div className="md:col-span-4 flex flex-col">
+                    <div className="flex items-center mb-4">
+                        <img src={footerLogo} alt="Footer Logo" className="h-15" />
                     </div>
-                    <p className='text-gray-description'>When an unknown printer took a galley of type aawer awtnd scrambled it to make a type specimen book.</p>
-                    <div className='py-5'>
-                        <div className='flex items-center space-x-5 mb-5'>
-                            <span className="text-blue-custom">
-                                <FiPhoneCall className='w-5 h-5' />
-                            </span>
-                            <span className='text-gray-description'>+123 888 9999</span>
-                        </div>
-                        <div className='flex space-x-5'>
-                            <span className="text-blue-custom">
-                                <HiOutlineClock className='w-5 h-5' />
-                            </span>
-                            <span className='text-gray-description w-[200px]'>
-                                Mon – Sat: 8 am – 5 pm,
-                                Sunday: <span className="text-blue-custom font-semibold">CLOSED</span>
-                            </span>
-                        </div>
-                    </div>
+                    <p className="text-blue-title text-sm">
+                        We combine deep technical knowledge with practical solutions to provide end-to-end consulting services.
+                    </p>
                 </div>
 
-                {/* Middle Section 1*/}
-                <div className='md:mx-auto md:col-span-2'>
-                    <h3 className="text-blue-custom font-medium text-2xl">Menu</h3>
-                    <div className="w-7 h-1 bg-blue-500 my-4"></div>
-                    <ul className="space-y-2">
-                        <li><a href="#" className="nav-link">Services</a></li>
-                        <li><a href="#" className="nav-link">About Us</a></li>
-                        <li><a href="#" className="nav-link">Contact Us</a></li>
+                {/* Middle Section: Menu */}
+                <div className="md:col-span-2">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-4">Menu</h3>
+                    <ul className="space-y-2 text-gray-description text-sm">
+                        <li><a href={urls.services} className="hover:underline">Services</a></li>
+                        <li><a href={urls.aboutus} className="hover:underline">About Us</a></li>
+                        <li><a href={urls.home} className="hover:underline">Contact Us</a></li>
                     </ul>
                 </div>
 
-                {/* Middle Section 2*/}
-                <div className="max-[600px]:mt-5 md:col-span-2">
-                    <h3 className="text-blue-custom font-medium text-2xl">Quick Links</h3>
-                    <div className="w-7 h-1 bg-blue-500 my-4"></div>
-                    <ul className="space-y-2 mb-6">
-                        <li><a href="#" className="nav-link">Service 1</a></li>
-                        <li><a href="#" className="nav-link">Service 2</a></li>
-                        <li><a href="#" className="nav-link">Service 3</a></li>
-                        <li><a href="#" className="nav-link">Service 4</a></li>
-                        <li><a href="#" className="nav-link">Service 5</a></li>
-                    </ul>
+                {/* Middle Section: Quick Links */}
+                <div className="md:col-span-2">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-4">Quick Links</h3>
+                    <div className="flex space-x-8">
+                        <ul className="space-y-2 text-gray-description text-sm">
+                            <li><a href="#" className="hover:underline">Service 1</a></li>
+                            <li><a href="#" className="hover:underline">Service 2</a></li>
+                            <li><a href="#" className="hover:underline">Service 3</a></li>
+                        </ul>
+                        <ul className="space-y-2 text-gray-description text-sm">
+                            <li><a href="#" className="hover:underline">Service 1</a></li>
+                            <li><a href="#" className="hover:underline">Service 2</a></li>
+                            <li><a href="#" className="hover:underline">Service 3</a></li>
+                        </ul>
+                    </div>
                 </div>
 
                 {/* Right Section */}
-                <div className='md:col-span-4'>
-                    <div className="flex space-x-2">
+                <div className="md:col-span-4 md:pl-10 md:pt-10">
+                    <div className="space-y-6">
+                        <div className="flex items-center space-x-4">
+                            <span className="text-gray-description">
+                                <FaPhoneAlt size={20} />
+                            </span>
+                            <span className="text-gray-description text-sm">022 - 35135278 /79</span>
+                        </div>
+                        <div className="flex items-start space-x-4">
+                            <span className="text-gray-description">
+                                <FaMapMarkerAlt size={20} />
+                            </span>
+                            <span className="text-gray-description text-sm">
+                                Akshya Nagar 1st Block 1st Cross, <br />
+                                Ramamurthy Nagar, Mumbai-400 001
+                            </span>
+                        </div>
+                    </div>
+                    {/* <div className="flex space-x-2">
                         <a href="#" className="social-media hover:bg-blue-custom">
                             <FaFacebookF className='w-5 h-5' />
                         </a>
@@ -80,13 +86,16 @@ export const Footer: React.FC = () => {
                         <a href="#" className="social-media hover:bg-red-youtube">
                             <FaYoutube className='w-5 h-5' />
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
-            <div className=" text-blue-copyright text-sm border-t border-gray-custom flex justify-center items-center py-5">
-                Copyright © Alvino Consultancy | All Right Reserved
+
+            {/* Bottom Section */}
+            <div className="text-gray-description text-sm text-center border-t border-gray-300 mt-8 pt-4">
+                Copyright © Alvino Consultancy | All Rights Reserved
             </div>
         </footer>
-    )
-}
+    );
+};
+
 export default Footer;

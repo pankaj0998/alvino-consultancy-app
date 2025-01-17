@@ -5,6 +5,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Modal from '../modal/Modal';
 import { Advisory, Assurance, DropDown, TaxAndRegulatory, TransactionDeals } from './navbar-menu';
 import { advisoryService, assuranceService, subService, transactionDealsService } from '../sub-services/sub-service';
+import { urls } from '../../links/url';
 
 const Navbar = () => {
     const [openDropdown, setOpenDropdown] = useState(null);
@@ -47,15 +48,15 @@ const Navbar = () => {
     };
 
     const menuItems = [
-        { name: 'Home', link: '/' },
-        { name: 'About Us', link: '/about-us' },
+        { name: 'Home', link: urls.home },
+        { name: 'About Us', link: urls.aboutus },
         {
             name: 'Services',
-            link: '/services',
+            link: urls.services,
             dropdown: [
                 {
                     name: DropDown.TRS,
-                    link: "/services/tax-regulatory-services",
+                    link: urls.taxRegulatoryService,
                     subDropdown: [
                         { name: TaxAndRegulatory.BTRC },
                         { name: TaxAndRegulatory.IO },
@@ -66,7 +67,7 @@ const Navbar = () => {
                     ]
                 },
                 {
-                    name: DropDown.AS, link: '/services/advisory-services',
+                    name: DropDown.AS, link: urls.advisoryService,
                     subDropdown: [
                         { name: Advisory.BC },
                         { name: Advisory.WRC },
@@ -76,7 +77,7 @@ const Navbar = () => {
                     ]
                 },
                 {
-                    name: DropDown.TD, link: '/services/transaction-deals',
+                    name: DropDown.TD, link: urls.transactionDealService,
                     subDropdown: [
                         { name: TransactionDeals.IACBT },
                         { name: TransactionDeals.DDTS },
@@ -85,7 +86,7 @@ const Navbar = () => {
                     ]
                 },
                 {
-                    name: DropDown.ARS, link: '/services/assurance-services',
+                    name: DropDown.ARS, link: urls.assuranceService,
                     subDropdown: [
                         { name: Assurance.FAA },
                         { name: Assurance.FAFD },
