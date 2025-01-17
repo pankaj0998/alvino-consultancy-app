@@ -2,12 +2,13 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PiGreaterThanBold } from "react-icons/pi";
 import { ServiceCardProps } from './ServiceCard.types';
+import './ServiceCard.css'
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, buttonText, imageUrl, className, route, style }) => {
     const navigate = useNavigate();
 
     return (
-        <div className={`bg-white rounded-lg overflow-hidden mb-12 mx-2 ${className}`}>
+        <div className={`rounded-lg overflow-hidden mb-12 mx-4 ${className}`}>
             <div className="relative h-48">
                 <img
                     src={imageUrl}
@@ -16,26 +17,20 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, buttonTex
                 />
             </div>
             <div className="pt-3">
-                <h3 className="text-2xl font-bold text-blue-900 mb-4">{title}</h3>
-                <p className="text-gray-400 mb-6 text-wrap">{description}</p>
+                <h3 className="text-2xl font-bold text-black-900 my-4">{title}</h3>
+                <p className="text-black mb-6 text-wrap truncate-multiline">{description}</p>
                 <button
                     onClick={() => navigate(route)}
-                    className="relative flex items-center justify-between w-[150px] h-10 pl-4 bg-white text-black border  border-gray-description rounded-full overflow-hidden group"
+                    className="relative flex items-center justify-center w-[150px] h-10 text-gray-description border border-custom rounded-md bg-white overflow-hidden group"
                 >
-                    {/* Text */}
-                    <span className="text-[12px] font-semibold relative z-10 transition-all duration-300 group-hover:text-white">
+                    {/* Background effect */}
+                    <span className="absolute inset-0 bg-gray-custom scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-center"></span>
+
+                    {/* Button Text */}
+                    <span className="relative z-10 text-[12px] font-semibold tracking-wide group-hover:text-black">
                         {buttonText}
                     </span>
-
-                    {/* Arrow Icon */}
-                    <div className="w-10 h-10 flex items-center justify-center bg-gray-description text-white rounded-full relative z-10">
-                        <PiGreaterThanBold className="w-5 h-3" />
-                    </div>
-
-                    {/* Hover Effect */}
-                    <span className="absolute right-0 h-full bg-gray-description w-0 transition-all duration-500 ease-out group-hover:w-full rounded-full"></span>
                 </button>
-
             </div>
         </div>
     );

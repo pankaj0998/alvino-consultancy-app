@@ -13,6 +13,7 @@ const Navbar = () => {
     const [nav, setNav] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [modalContent, setModalContent] = useState({});
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
 
     const toggleModal = () => {
         setIsOpen(!isOpen);
@@ -119,6 +120,28 @@ const Navbar = () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
+
+    // Function to update `isDesktop` state based on screen size
+    const handleResize = () => {
+        setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    // Effect to add and remove resize event listener
+    useEffect(() => {
+        window.addEventListener("resize", handleResize);
+
+        // Clean up listener on component unmount
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    // Effect to handle navigation state when switching to desktop
+    useEffect(() => {
+        if (isDesktop) {
+            setNav(false); // Ensure mobile nav is closed on desktop
+        }
+    }, [isDesktop]);
 
     return (
         <div ref={navbarRef}>
