@@ -7,6 +7,7 @@ import AdvisoryPage from "./pages/sub-pages/Advisory";
 import TransactionDeals from "./pages/sub-pages/Transaction-Deals";
 import AssurancePage from "./pages/sub-pages/Assurance";
 import { urls } from "./links/url";
+import ContactUs from "./pages/ContactUs";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path={urls.home} element={<HomePage />} />
         <Route path={urls.aboutus} element={<AboutUs />} />
         <Route path={urls.services} element={<Services />} />
+        <Route path={urls.contactUs} element={<ContactUs />} />
         <Route path={urls.taxRegulatoryService} element={<TaxRegulatoryPage />} />
         <Route path={urls.advisoryService} element={<AdvisoryPage />} />
         <Route path={urls.transactionDealService} element={<TransactionDeals />} />

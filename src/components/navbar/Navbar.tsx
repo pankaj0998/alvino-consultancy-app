@@ -97,7 +97,7 @@ const Navbar = () => {
         },
         { name: 'Insights', link: '/' },
         { name: 'Careers', link: '/' },
-        { name: 'Contact Us', link: '/' }
+        { name: 'Contact Us', link: urls.contactUs }
     ];
 
     const toggleDropdown = (index: any) => {

@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
                     <ul className="space-y-2 text-gray-description text-sm">
                         <li><a href={urls.services} className="hover:underline">Services</a></li>
                         <li><a href={urls.aboutus} className="hover:underline">About Us</a></li>
-                        <li><a href={urls.home} className="hover:underline">Contact Us</a></li>
+                        <li><a href={urls.contactUs} className="hover:underline">Contact Us</a></li>
                     </ul>
                 </div>
 
