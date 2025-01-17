@@ -1,25 +1,22 @@
-import { PiGreaterThanBold } from 'react-icons/pi';
-import landingImage from '/images/landing-page.png';
+import landingImage from '/images/landingPage.png';
 import React from "react";
 import { HeroSectionProps } from './Hero.types';
+import { useNavigate } from 'react-router-dom';
 
-const HeroSection: React.FC<HeroSectionProps> = ({ heading, tagline, description, buttonText }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ heading, description, buttonText, route }) => {
+    const navigate = useNavigate();
+
     return (
         <div className="relative w-full lg:h-screen">
             <section
                 className="relative w-full lg:h-screen bg-cover bg-center flex items-center lg:top-0 text-white"
                 style={{
                     backgroundImage: `url(${landingImage})`, // Replace with your image path
+                    // objectFit: 'cover'
                 }}
             >
                 {/* Content */}
-                <div className="relative max-w-4xl px-6 md:px-12 lg:px-16 pt-10 max-[1024px]:p-16 max-[1024px]:mt-16">
-                    {/* Tagline */}
-                    <div className="flex mb-4">
-                        <span className="text-sm font-medium uppercase bg-gray-description/60 text-gray-custom py-1 px-3 rounded">
-                            {tagline}
-                        </span>
-                    </div>
+                <div className="relative max-w-7xl px-6 md:px-12 lg:px-16 pt-10 max-[1024px]:p-16 max-[1024px]:mt-16">
 
                     {/* Title */}
                     <h1 className="mt-6 text-4xl font-bold sm:text-5xl md:text-6xl leading-tight">
@@ -27,30 +24,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heading, tagline, description
                     </h1>
 
                     {/* Subtitle */}
-                    <p className="mt-4 text-lg font-medium text-gray-custom/50 leading-relaxed max-w-2xl">
+                    <p className="mt-4 text-lg font-medium text-gray-custom leading-relaxed">
                         {description}
                     </p>
 
                     {/* Button */}
                     <div className="mt-8">
-                        <a href="/services">
-                            <button
-                                className="relative flex items-center justify-between w-[200px] h-12 pl-6 bg-blue-custom text-white rounded-full overflow-hidden group"
-                            >
-                                {/* Text */}
-                                <span className="text-sm font-semibold uppercase relative z-10 transition-all duration-300 group-hover:text-white">
-                                    {buttonText}
-                                </span>
+                        <button
+                            onClick={() => navigate(route)}
+                            className="relative flex items-center justify-center w-[150px] h-10 text-blue-custom border border-custom rounded-md bg-white overflow-hidden group opacity-90"
+                        >
+                            {/* Background effect */}
+                            <span className="absolute inset-0 bg-gray-custom scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-center"></span>
 
-                                {/* Arrow Icon */}
-                                <div className="w-12 h-12 flex items-center justify-center bg-blue-title text-white rounded-full relative z-10">
-                                    <PiGreaterThanBold className="w-5 h-3 font-semibold" />
-                                </div>
-
-                                {/* Hover Effect */}
-                                <span className="absolute right-0 h-full bg-blue-title w-0 transition-all duration-500 ease-out group-hover:w-full rounded-full"></span>
-                            </button>
-                        </a>
+                            {/* Button Text */}
+                            <span className="relative z-10 text-xs font-semibold tracking-wide uppercase group-hover:text-black">
+                                {buttonText}
+                            </span>
+                        </button>
                     </div>
 
                 </div>
