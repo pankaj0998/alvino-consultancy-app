@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PiGreaterThanBold } from "react-icons/pi";
 import { ServiceCardProps } from './ServiceCard.types';
 import './ServiceCard.css'
 

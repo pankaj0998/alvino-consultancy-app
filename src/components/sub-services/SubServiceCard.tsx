@@ -6,9 +6,9 @@ const SubServiceCard: React.FC<CardProps> = ({ image, title, description, cardDa
     const [showMore, setShowMore] = useState(false);
 
     return (
-        <div className="w-full rounded-lg shadow-lg mb:mt-6 text bg-gray-custom">
+        <div className="w-full rounded-lg shadow-lg mb:mt-6 text bg-gray-custom overflow-hidden">
             {/* Image Section */}
-            <img className="w-full h-48 object-cover rounded-t-lg" src={image ?? businessImage} alt="Card Image" />
+            <img className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 ease-in-out transform hover:scale-110" src={image ?? businessImage} alt="Card Image" />
 
             {/* Content Section */}
             <div className={`md:max-h-full max-[600px]:p-4 ${cardData && description ? 'px-6 pt-6 pb-0' : 'px-6 pt-6 pb-0'}`}>
@@ -46,7 +46,7 @@ const SubServiceCard: React.FC<CardProps> = ({ image, title, description, cardDa
                 {/* Button Container */}
                 {isButtonRequired && <div className={`flex justify-center items-center mt-4 ${cardData ? 'pb-5' : 'pb-1'}`}>
                     <button
-                        className="relative flex justify-center items-center w-[150px] h-10 text-gray-description border border-gray-description rounded-full overflow-hidden group"
+                        className="relative flex justify-center items-center w-[150px] h-10 text-gray-description border border-gray-description rounded-md overflow-hidden group"
                         onClick={toggler}
                     >
                         {/* Text */}
@@ -55,7 +55,7 @@ const SubServiceCard: React.FC<CardProps> = ({ image, title, description, cardDa
                         </span>
 
                         {/* Hover Effect */}
-                        <span className="absolute right-0 h-full bg-gray-description w-0 transition-all duration-300 ease-out group-hover:w-full rounded-full hover:border hover:border-gray-description"></span>
+                        <span className="absolute inset-0 bg-gray-description scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-center"></span>
                     </button>
                 </div>}
             </div>

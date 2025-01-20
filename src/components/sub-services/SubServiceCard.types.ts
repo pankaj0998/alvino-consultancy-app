@@ -1,4 +1,4 @@
-type CardData = {
+export type CardData = {
     subtitle: string;
     subDescription: string;
 }
@@ -8,11 +8,18 @@ export type CardProps = {
     title: string;
     description?: string;
     cardData?: CardData[];
-    isButtonRequired: boolean,
+    isButtonRequired?: boolean,
     toggler?: () => void;
 
 }
 
+export type SubServiceProps = {
+    image: string;
+    title: string;
+    description?: string;
+    cardData?: CardData[];
+}
+
 export type CardGridProps = {
-    cards: CardProps[];
+    cards: SubServiceProps[];
 }
