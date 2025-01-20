@@ -4,7 +4,7 @@ import { MissionCardTypeProps } from "./MissionCard.types";
 const MissionCard: React.FC<MissionCardTypeProps> = ({ title, description, backgroundImage }) => {
     return (
         <div
-            className={`relative h-[200px] md:h-[250px] bg-cover bg-center flex text-white p-10`}
+            className={`relative h-fit md:h-[250px] bg-cover bg-center flex text-white p-10`}
             style={{ backgroundImage: `url(${backgroundImage})` }}
         >
             <div className="relative w-full p-6">
