@@ -1,10 +1,14 @@
 import { IconType } from "react-icons";
 
+export type LinkProps = {
+    list: string;
+    route: string
+}
 export type ContentType = {
     title: string;
     heading: string;
     paragraph: any;
-    list: Array<string>
+    list: Array<LinkProps>
 }
 
 export type InformationScreenTypeProps = {

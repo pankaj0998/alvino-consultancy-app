@@ -29,7 +29,7 @@ const InformationScreen: React.FC<InformationScreenTypeProps> = ({ image, conten
                                     <ListIcon className="text-white w-3" />
                                 </div>
                             )}
-                            <span className="text-blue-custom text-lg font-medium">{item}</span>
+                            <span className="text-blue-title text-lg font-medium transform transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer"><a href={item.route}>{item.list}</a></span>
                         </li>
                     ))}
                 </ul>

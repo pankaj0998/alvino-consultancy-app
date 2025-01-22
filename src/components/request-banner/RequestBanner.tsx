@@ -34,7 +34,7 @@ const RequestBanner: React.FC<RequestBannerProps> = ({ title, description }) => 
                         />
                         <button
                             type="submit"
-                            className="w-full bg-[#5991FF] hover:bg-[#4A7FE5] text-white font-medium text-sm p-2 rounded-md transition-colors"
+                            className="w-full bg-blue-title text-white font-medium text-sm p-2 rounded-md transition-colors cursor-pointer"
                         >
                             SEND NOW
                         </button>

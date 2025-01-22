@@ -20,9 +20,8 @@ export const Footer: React.FC = () => {
                         <img src={footerLogo} alt="Footer Logo" className="h-15" />
                     </div>
                     <div className='flex flex-col'>
-                        <span className='font-thin'>Timings:</span>
-                        <span>Monday to Saturday</span>
-                        <span>9.30am to 7pm IST</span>
+                        <span className='text-gray-description text-sm'>Monday to Saturday</span>
+                        <span className='text-gray-description text-sm'>9.30 am - 7 pm IST</span>
                     </div>
                 </div>
 
@@ -41,14 +40,14 @@ export const Footer: React.FC = () => {
                     <h3 className="text-lg font-semibold text-gray-800 mb-4">Quick Links</h3>
                     <div className="flex space-x-16">
                         <ul className="space-y-2 text-gray-description text-sm">
-                            <li><a href={urls.rbi} target='_blank' className="hover:underline hover:text-blue-custom">RBI</a></li>
-                            <li><a href={urls.gst} target='_blank' className="hover:underline hover:text-blue-custom">GST Gov.</a></li>
-                            <li><a href={urls.mca} target='_blank' className="hover:underline hover:text-blue-custom">MCA Gov.</a></li>
+                            <li><a href={urls.rbi} target='_blank' className="hover:underline">RBI</a></li>
+                            <li><a href={urls.gst} target='_blank' className="hover:underline">GST Gov.</a></li>
+                            <li><a href={urls.mca} target='_blank' className="hover:underline">MCA Gov.</a></li>
                         </ul>
                         <ul className="space-y-2 text-gray-description text-sm">
-                            <li><a href={urls.incomeTax} target='_blank' className="hover:underline hover:text-blue-custom">Income Tax India</a></li>
-                            <li><a href={urls.dgft} target='_blank' className="hover:underline hover:text-blue-custom">DGFT Gov</a></li>
-                            <li><a href={urls.sebi} target='_blank' className="hover:underline hover:text-blue-custom">SEBI Gov</a></li>
+                            <li><a href={urls.incomeTax} target='_blank' className="hover:underline">Income Tax India</a></li>
+                            <li><a href={urls.dgft} target='_blank' className="hover:underline">DGFT Gov</a></li>
+                            <li><a href={urls.sebi} target='_blank' className="hover:underline">SEBI Gov</a></li>
                         </ul>
                     </div>
                 </div>
@@ -60,7 +59,7 @@ export const Footer: React.FC = () => {
                             <span className="text-gray-description">
                                 <FaPhoneAlt size={20} />
                             </span>
-                            <span className="text-gray-description text-sm">022 - 35135278 /79</span>
+                            <span className="text-gray-description text-sm">022 - 35135278 / 79</span>
                         </div>
                         <div className="flex items-start space-x-4">
                             <span className="text-gray-description">
