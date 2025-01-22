@@ -41,14 +41,14 @@ export const Footer: React.FC = () => {
                     <h3 className="text-lg font-semibold text-gray-800 mb-4">Quick Links</h3>
                     <div className="flex space-x-16">
                         <ul className="space-y-2 text-gray-description text-sm">
-                            <li><a href="#" className="hover:underline hover:text-blue-custom">RBI</a></li>
-                            <li><a href="#" className="hover:underline hover:text-blue-custom">GST Gov.</a></li>
-                            <li><a href="#" className="hover:underline hover:text-blue-custom">MCA Gov.</a></li>
+                            <li><a href={urls.rbi} target='_blank' className="hover:underline hover:text-blue-custom">RBI</a></li>
+                            <li><a href={urls.gst} target='_blank' className="hover:underline hover:text-blue-custom">GST Gov.</a></li>
+                            <li><a href={urls.mca} target='_blank' className="hover:underline hover:text-blue-custom">MCA Gov.</a></li>
                         </ul>
                         <ul className="space-y-2 text-gray-description text-sm">
-                            <li><a href="#" className="hover:underline hover:text-blue-custom">Income Tax India</a></li>
-                            <li><a href="#" className="hover:underline hover:text-blue-custom">DGFT Gov</a></li>
-                            <li><a href="#" className="hover:underline hover:text-blue-custom">SEBI Gov</a></li>
+                            <li><a href={urls.incomeTax} target='_blank' className="hover:underline hover:text-blue-custom">Income Tax India</a></li>
+                            <li><a href={urls.dgft} target='_blank' className="hover:underline hover:text-blue-custom">DGFT Gov</a></li>
+                            <li><a href={urls.sebi} target='_blank' className="hover:underline hover:text-blue-custom">SEBI Gov</a></li>
                         </ul>
                     </div>
                 </div>
