@@ -19,9 +19,11 @@ export const Footer: React.FC = () => {
                     <div className="flex items-center mb-4">
                         <img src={footerLogo} alt="Footer Logo" className="h-15" />
                     </div>
-                    <p className="text-blue-title text-sm">
-                        We combine deep technical knowledge with practical solutions to provide end-to-end consulting services.
-                    </p>
+                    <div className='flex flex-col'>
+                        <span className='font-thin'>Timings:</span>
+                        <span>Monday to Saturday</span>
+                        <span>9.30am to 7pm IST</span>
+                    </div>
                 </div>
 
                 {/* Middle Section: Menu */}
@@ -35,24 +37,24 @@ export const Footer: React.FC = () => {
                 </div>
 
                 {/* Middle Section: Quick Links */}
-                <div className="md:col-span-2">
+                <div className="md:col-span-3">
                     <h3 className="text-lg font-semibold text-gray-800 mb-4">Quick Links</h3>
-                    <div className="flex space-x-8">
+                    <div className="flex space-x-16">
                         <ul className="space-y-2 text-gray-description text-sm">
-                            <li><a href="#" className="hover:underline">Service 1</a></li>
-                            <li><a href="#" className="hover:underline">Service 2</a></li>
-                            <li><a href="#" className="hover:underline">Service 3</a></li>
+                            <li><a href="#" className="hover:underline hover:text-blue-custom">RBI</a></li>
+                            <li><a href="#" className="hover:underline hover:text-blue-custom">GST Gov.</a></li>
+                            <li><a href="#" className="hover:underline hover:text-blue-custom">MCA Gov.</a></li>
                         </ul>
                         <ul className="space-y-2 text-gray-description text-sm">
-                            <li><a href="#" className="hover:underline">Service 1</a></li>
-                            <li><a href="#" className="hover:underline">Service 2</a></li>
-                            <li><a href="#" className="hover:underline">Service 3</a></li>
+                            <li><a href="#" className="hover:underline hover:text-blue-custom">Income Tax India</a></li>
+                            <li><a href="#" className="hover:underline hover:text-blue-custom">DGFT Gov</a></li>
+                            <li><a href="#" className="hover:underline hover:text-blue-custom">SEBI Gov</a></li>
                         </ul>
                     </div>
                 </div>
 
                 {/* Right Section */}
-                <div className="md:col-span-4 md:pl-10 md:pt-10">
+                <div className="md:col-span-3 md:pt-10">
                     <div className="space-y-6">
                         <div className="flex items-center space-x-4">
                             <span className="text-gray-description">

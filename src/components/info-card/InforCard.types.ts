@@ -12,7 +12,7 @@ export type SocialMediaLink = {
 
 export type InfoCardTypeProps = {
     name: string;
-    position: string;
+    position?: string;
     image?: string
     socialMedia: SocialMediaLink[];
 }

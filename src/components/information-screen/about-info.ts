@@ -7,8 +7,8 @@ export const aboutUsInfo: InformationScreenTypeProps = {
     content: {
         title: "Background",
         heading: "Who We Are",
-        paragraph: `At <span class="text-blue-custom">Alvino Consultancy</span>, we combine deep technical knowledge with practical solutions to provide end-to-end consulting services. We support a diverse range of clients, helping them optimize operations, navigate complex tax laws, and achieve sustainable growth. Our strong network of affiliates allows us to provide seamless global solutions to clients operating locally and/or globally. Our offerings span across:`,
-        list: ["Tax and Regulatory Compliance", "Advisory", "Transaction Structuring", "Assurance", "Strategic Consulting"]
+        paragraph: `At <span class="text-blue-custom">Alvino Consultancy</span>, we blend deep technical expertise with practical, results-driven solutions to offer comprehensive end-to-end consulting services. Serving a diverse clientele, we empower businesses to streamline operations, navigate intricate regulatory frameworks, and achieve sustainable growth. With a robust network of affiliates across India as well as Europe & Asia, we deliver seamless solutions that address the unique challenges of both local and international operations. Our suite of services span across the following areas:`,
+        list: ["Tax and Regulatory Compliance", "Advisory Services", "Transaction Structuring", "Assurance", "Strategic Consulting"]
     },
     listIcon: FaArrowRight
 }

@@ -14,9 +14,9 @@ const InformationScreen: React.FC<InformationScreenTypeProps> = ({ image, conten
             </div>
             {/* Content Section */}
             <div className="w-full md:w-1/2 lg:p-6 mt-8">
-                <div className=" flex justify-center rounded bg-blue-light w-fit">
+                {/* <div className=" flex justify-center rounded bg-blue-light w-fit">
                     <span className="text-sm font-medium  text-blue-500 py-1 px-3 rounded">{content.title.toUpperCase()}</span>
-                </div>
+                </div> */}
                 <h2 className="text-4xl font-semibold mt-4 text-blue-title">{content.heading}</h2>
                 <p className="text-gray-description font-medium mt-4 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.paragraph }}></p>
 
@@ -25,11 +25,11 @@ const InformationScreen: React.FC<InformationScreenTypeProps> = ({ image, conten
                     {content.list.map((item, index) => (
                         <li key={index} className="flex items-center gap-3">
                             {ListIcon && (
-                                <div className="flex items-center justify-center w-6 h-6 bg-blue-custom rounded-full">
+                                <div className="flex items-center justify-center w-6 h-6 bg-gray-description rounded-full">
                                     <ListIcon className="text-white w-3" />
                                 </div>
                             )}
-                            <span className="text-blue-title text-lg font-semibold">{item}</span>
+                            <span className="text-blue-custom text-lg font-medium">{item}</span>
                         </li>
                     ))}
                 </ul>

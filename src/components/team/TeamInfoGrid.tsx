@@ -5,7 +5,7 @@ const TeamInfoGrid: React.FC<TeamInfoGridProps> = ({ tagline, teamInfo, heading 
     return (
         <div className="flex w-full flex-col px-10">
             {/* Content Section */}
-            <div className="w-full lg:p-6 mt-8">
+            <div className="w-full lg:p-6 lg:pt-16 mt-8">
                 {/* <div className=" flex justify-center rounded bg-blue-light w-fit">
                     <span className="text-sm font-medium  text-blue-500 py-1 px-3 rounded uppercase">{tagline}</span>
                 </div> */}
