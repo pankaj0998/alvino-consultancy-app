@@ -1,7 +1,7 @@
 import React from "react";
 import { HeroSectionProps } from './Hero.types';
 import { useNavigate } from 'react-router-dom';
-import { images } from '../../images/image';
+import Landing from '/images/landingPage.png';
 
 const HeroSection: React.FC<HeroSectionProps> = ({ heading, description, buttonText, route }) => {
     const navigate = useNavigate();
@@ -11,7 +11,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heading, description, buttonT
             <section
                 className="relative w-full lg:h-screen bg-cover bg-center flex items-center lg:top-0 text-white"
                 style={{
-                    backgroundImage: `url(${images.Landing})`, // Replace with your image path
+                    backgroundImage: `url(${Landing})`, // Replace with your image path
                     // objectFit: 'cover'
                 }}
             >
