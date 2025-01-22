@@ -91,7 +91,7 @@ const ContactForm: React.FC = () => {
                         id="fullName"
                         value={formData.fullName}
                         onChange={handleChange}
-                        placeholder="John Doe"
+                        placeholder="Enter your full name"
                         className={`mt-1 block w-full p-2 border-b ${errors.fullName
                             ? "border-red-500"
                             : "border-gray-300 focus:border-blue-title"
@@ -114,7 +114,7 @@ const ContactForm: React.FC = () => {
                         id="contact"
                         value={formData.contact}
                         onChange={handleChange}
-                        placeholder="+91 9876543210"
+                        placeholder="Enter your contact number"
                         className={`mt-1 block w-full p-2 border-b ${errors.contact
                             ? "border-red-500"
                             : "border-gray-300 focus:border-blue-title"
@@ -136,7 +136,7 @@ const ContactForm: React.FC = () => {
                         name="email"
                         id="email"
                         value={formData.email}
-                        placeholder="john.doe@gmail.com"
+                        placeholder="Enter your business email"
                         onChange={handleChange}
                         className={`mt-1 block w-full p-2 border-b ${errors.email
                             ? "border-red-500"
@@ -173,7 +173,7 @@ const ContactForm: React.FC = () => {
                 </div>
                 <button
                     type="submit"
-                    className="w-[300px] bg-blue-custom text-white py-2 px-4 rounded-md hover:bg-blue-title focus:outline-none mt-5"
+                    className="w-[300px] bg-blue-title  text-white py-2 px-4 rounded-md hover:bg-blue-title focus:outline-none mt-5"
                 >
                     SEND MESSAGE
                 </button>
