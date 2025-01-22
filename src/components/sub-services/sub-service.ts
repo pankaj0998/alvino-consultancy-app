@@ -1,23 +1,23 @@
 import { Advisory, Assurance, TaxAndRegulatory, TransactionDeals } from "../navbar/navbar-menu";
 import { CardProps } from "./SubServiceCard.types";
-import businessTaxImage from '/images/tax-regulatory/business-tax.png';
-import inboundImage from '/images/tax-regulatory/inbound.png';
-import indirectImage from '/images/tax-regulatory/indirect.png';
-import lititgationImage from '/images/tax-regulatory/litigation.png';
-import taxManagedImage from '/images/tax-regulatory/tax-managed.png';
-import transferImage from '/images/tax-regulatory/transfer.png';
-import businessConsultingImage from '/images/advisory-service/BusinessConsu.png';
-import strategicConsultingImage from '/images/advisory-service/StrategyConsu.png';
-import equityImage from '/images/advisory-service/Equity SME.png';
-import ipoImage from '/images/advisory-service/IPO and QIP.png';
-import workforceImage from '/images/advisory-service/Workforce.png';
-import investmentImage from '/images/transaction-deals/Investment.png';
-import debtRestImage from '/images/transaction-deals/Debt Rest.png';
-import dueDiligenceImage from '/images/transaction-deals/Due Diligence.png';
-import valuationImage from '/images/transaction-deals/Valuation Services.png';
-import financialImage from '/images/assurance/Financial.png';
-import forensicImage from '/images/assurance/Forensic.png';
-import accountingImage from '/images/assurance/Accounting Advi.png';
+import businessTaxImage from '/images/business-tax.png';
+import inboundImage from '/images/inbound.png';
+import indirectImage from '/images/indirect.png';
+import lititgationImage from '/images/litigation.png';
+import taxManagedImage from '/images/tax-managed.png';
+import transferImage from '/images/transfer.png';
+import businessConsultingImage from '/images/BusinessConsu.png';
+import strategicConsultingImage from '/images/StrategyConsu.png';
+import equityImage from '/images/Equity SME.png';
+import ipoImage from '/images/IPO and QIP.png';
+import workforceImage from '/images/Workforce.png';
+import investmentImage from '/images/Investment.png';
+import debtRestImage from '/images/Debt Rest.png';
+import dueDiligenceImage from '/images/Due Diligence.png';
+import valuationImage from '/images/Valuation Services.png';
+import financialImage from '/images/Financial.png';
+import forensicImage from '/images/Forensic.png';
+import accountingImage from '/images/Accounting Advi.png';
 
 export const subService: CardProps[] = [
     {
