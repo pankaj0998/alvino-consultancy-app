@@ -1,6 +1,6 @@
 import { ServiceCardGridProps } from './ServiceCard.types';
 import { urls } from '../../links/url';
-import { images } from '../../assets/images';
+import { images } from '../../images/image';
 
 export const cardData: ServiceCardGridProps = {
     cards: [

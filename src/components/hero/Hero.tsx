@@ -1,7 +1,7 @@
 import React from "react";
 import { HeroSectionProps } from './Hero.types';
 import { useNavigate } from 'react-router-dom';
-import { images } from '../../assets/images';
+import { images } from '../../images/image';
 
 const HeroSection: React.FC<HeroSectionProps> = ({ heading, description, buttonText, route }) => {
     const navigate = useNavigate();

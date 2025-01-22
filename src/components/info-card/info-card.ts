@@ -1,4 +1,4 @@
-import { images } from "../../assets/images";
+import { images } from "../../images/image";
 import { InfoCardTypeProps, SocialMedia } from "./InforCard.types";
 
 export const ankurShahInfo: InfoCardTypeProps = {

@@ -1,6 +1,6 @@
 import { Advisory, Assurance, TaxAndRegulatory, TransactionDeals } from "../navbar/navbar-menu";
 import { CardProps } from "./SubServiceCard.types";
-import { images } from "../../assets/images";
+import { images } from "../../images/image";
 
 export const subService: CardProps[] = [
     {
