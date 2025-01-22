@@ -5,15 +5,15 @@ import InfoCard from "../info-card/InfoCard";
 const TeamInfo: React.FC<TeamInfoProps> = ({ info, description, isAlignRight = false, listItems }) => {
     return (
         <div
-            className={`grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-6 items-start px-10 pb-20 `}
+            className={`grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 items-start px-10 pb-20 `}
         >
             {/* Info Card - Adjust for larger size */}
-            <div className={`col-span-1 md:col-span-1 flex justify-center ${isAlignRight ? 'order-last' : 'order-first'}`}>
+            <div className={`col-span-1 md:col-span-3 flex justify-center ${isAlignRight ? 'md:order-last' : 'md:order-first'}`}>
                 <InfoCard {...info} />
             </div>
 
             {/* Description Section */}
-            <div className="col-span-1 md:col-span-4 text-justify">
+            <div className="col-span-1 md:col-span-9 text-justify">
                 <p className="text-gray-description md:text-base leading-6 md:px-10" dangerouslySetInnerHTML={{ __html: description }}></p>
                 {/* Unordered List */}
                 {listItems && listItems.length > 0 && (
