@@ -46,16 +46,16 @@ const SubServiceCard: React.FC<CardProps> = ({ image, title, description, cardDa
                 {/* Button Container */}
                 {isButtonRequired && <div className={`flex justify-center items-center mt-4 ${cardData ? 'pb-5' : 'pb-1'}`}>
                     <button
-                        className="relative flex justify-center items-center w-[150px] h-10 text-gray-description border border-gray-description rounded-md overflow-hidden group"
+                        className="relative flex bg-white bg-opacity-50 justify-center items-center w-[150px] h-10 text-gray-description border border-gray-description rounded-md overflow-hidden group"
                         onClick={toggler}
                     >
                         {/* Text */}
-                        <span className="text-[12px] uppercase font-semibold relative z-10 transition-all duration-300 group-hover:text-white">
+                        <span className="text-[12px] uppercase font-semibold relative z-10 transition-all duration-300 group-hover:text-black">
                             CLOSE
                         </span>
 
                         {/* Hover Effect */}
-                        <span className="absolute inset-0 bg-gray-description scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-center"></span>
+                        <span className="absolute inset-0 bg-gray-custom scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-center"></span>
                     </button>
                 </div>}
             </div>

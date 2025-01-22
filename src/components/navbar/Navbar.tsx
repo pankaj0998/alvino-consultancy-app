@@ -149,10 +149,10 @@ const Navbar = () => {
             {/* Top Bar */}
             <div className="bg-blue-title text-gray-custom lg:flex justify-end items-center px-6 py-2 hidden">
                 <div className="flex items-center md:space-x-10 flex-wrap text-sm">
-                    <div className="flex items-center space-x-2 max-[600px]:mr-2">
+                    {/* <div className="flex items-center space-x-2 max-[600px]:mr-2">
                         <FaPhoneAlt />
                         <span>+91 82453 2652</span>
-                    </div>
+                    </div> */}
                     <div className="flex items-center space-x-2">
                         <FaEnvelope />
                         <span>info@alvinoconsultancy.com</span>
@@ -209,19 +209,26 @@ const Navbar = () => {
                                                 </div>
                                                 {/* Sub Dropdown */}
                                                 {dropdownItem.subDropdown && openSubDropdown === subIndex && (
-                                                    <ul className="absolute left-full top-0 mt-0 w-72 bg-white shadow-lg rounded-md overflow-hidden ">
+                                                    <ul className="absolute left-full top-0 mt-0 w-72 bg-white shadow-lg rounded-md overflow-hidden">
                                                         {dropdownItem.subDropdown.map((subItem, subSubIndex) => (
-                                                            <li key={subSubIndex} className="text-gray-description hover:text-blue-title hover:bg-blue-light font-normal" onClick={(e) => {
-                                                                e.stopPropagation();
-                                                                toggleModal();
-                                                                handleSubDropdownClick(subItem.name, dropdownItem.name)
-                                                            }}>
-                                                                <div className='flex items-center justify-between px-2 py-2 hover:bg-blue-light cursor-pointer truncate whitespace-nowrap overflow-hidden'>
-                                                                    {subItem.name}
+                                                            <li
+                                                                key={subSubIndex}
+                                                                className="text-gray-description hover:text-blue-title hover:bg-blue-light font-normal text-sm"
+                                                                onClick={(e) => {
+                                                                    e.stopPropagation();
+                                                                    toggleModal();
+                                                                    handleSubDropdownClick(subItem.name, dropdownItem.name);
+                                                                }}
+                                                            >
+                                                                <div className="flex items-center justify-between px-2 py-2 cursor-pointer">
+                                                                    <span className="truncate overflow-hidden whitespace-nowrap w-full">
+                                                                        {subItem.name}
+                                                                    </span>
                                                                 </div>
                                                             </li>
                                                         ))}
                                                     </ul>
+
                                                 )}
                                             </li>
                                         ))}

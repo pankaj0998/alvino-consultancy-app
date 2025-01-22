@@ -37,7 +37,7 @@ const SubServiceInfo: React.FC<SubServiceProps> = ({ title, image, description, 
                         </li>
                     </ul>
                 )}
-                <div className='flex justify-end'><p className='text-sm text-blue-custom cursor-pointer' onClick={(e) => {
+                <div className='flex justify-start'><p className='text-sm text-blue-custom cursor-pointer pt-2' onClick={(e) => {
                     e.stopPropagation();
                     toggleModal();
                     handleModal({ title, image, description, cardData })

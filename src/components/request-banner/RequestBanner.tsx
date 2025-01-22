@@ -13,24 +13,24 @@ const RequestBanner: React.FC<RequestBannerProps> = ({ title, description }) => 
             </div>
 
             {/* Right Side - Form */}
-            <div className=" mr-16 lg:w-1/2">
+            <div className=" pr-12 lg:w-1/2">
                 <form action="" className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                         type="text"
                         placeholder="Name *"
-                        className="bg-gray-100 rounded-md p-2 w-full h-12 outline-none"
+                        className="bg-gray-custom rounded-md p-2 w-full h-12 outline-none"
                     />
                     <input
                         type="email"
                         placeholder="E-mail *"
-                        className="bg-gray-100 rounded-md p-2 w-full outline-none"
+                        className="bg-gray-custom rounded-md p-2 w-full outline-none"
                     />
                     {/* Phone input and send button on the same row */}
                     <div className="md:col-span-2 flex gap-4">
                         <input
                             type="tel"
                             placeholder="Phone *"
-                            className="bg-gray-50 rounded-md p-2 w-full h-12 outline-none"
+                            className="bg-gray-custom rounded-md p-2 w-full h-12 outline-none"
                         />
                         <button
                             type="submit"
