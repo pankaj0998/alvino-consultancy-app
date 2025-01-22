@@ -4,7 +4,7 @@ import linerImage from '/images/liner.png'
 
 export const services: SubBannerTypeProps = {
     title: "Our Services",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    description: "Explore our comprehensive suite of services for driving growth, guiding compliances and market entry, enhancing efficiency, and transforming challenges into sustainable success.",
     backgroundImage: subBannerImage,
     linerImageUrl: linerImage
 }

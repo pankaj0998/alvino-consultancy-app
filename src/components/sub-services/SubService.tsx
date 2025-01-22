@@ -24,14 +24,14 @@ const SubServiceInfo: React.FC<SubServiceProps> = ({ title, image, description, 
             </div>
             <div className="pt-3">
                 <h3 className="text-2xl font-bold text-blue-title my-4">{title}</h3>
-                {description && (<p className="text-black text-wrap truncate-multiline">{description}</p>)}
+                {description && (<p className="text-black text-wrap truncate-line">{description}</p>)}
                 {cardData && cardData.length > 0 && (
                     <ul className="list-disc pl-5">
                         <li className="mb-0">
                             <h3 className="font-semibold text-black mb-1 max-[600px]:text-[14px]">
                                 {cardData[0].subtitle ?? "SubTitle"}
                             </h3>
-                            <p className="text-black text-wrap truncate-multiline">
+                            <p className="text-black text-wrap truncate-line">
                                 {cardData[0].subDescription ?? "SubDescription"}
                             </p>
                         </li>

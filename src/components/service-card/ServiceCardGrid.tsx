@@ -5,7 +5,7 @@ import { ServiceCardGridProps } from './ServiceCard.types';
 
 const ServiceCardGrid: React.FC<ServiceCardGridProps> = ({ cards }) => {
     return (
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:px-10`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16 lg:px-10`}>
             {cards.map((card, index) => (
                 <ServiceCard
                     key={index}

@@ -74,9 +74,10 @@ const ContactForm: React.FC = () => {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between max-w-7xl mx-auto p-6 rounded-md bg-opacity-40 bg-gray-custom">
             {/* Form Section */}
             <form onSubmit={handleSubmit} className="w-full md:w-1/2 p-6">
-                <h2 className="text-lg font-semibold text-gray-description mb-4">
-                    Fill up the form and our Team will get back to you within 24 hours.
+                <h2 className="text-lg font-semibold text-gray-description">
+                    Fill up the form
                 </h2>
+                <p className="mb-20 text-gray-description opacity-75">Our team will get back to you within 24 hours.</p>
                 <div className="mb-4">
                     <label
                         htmlFor="fullName"
@@ -162,7 +163,7 @@ const ContactForm: React.FC = () => {
                         className={`mt-1 block w-full p-2 border-b ${errors.message
                             ? "border-red-500"
                             : "border-gray-300 focus:border-blue-title"
-                            } focus:outline-none bg-transparent h-[200px]`}
+                            } focus:outline-none bg-transparent h-[100px]`}
                         maxLength={250}
                         rows={4}
                     ></textarea>
