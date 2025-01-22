@@ -7,7 +7,9 @@ const ComingSoonPage = () => {
     return (
         <>
             <Navbar />
-            <ComingSoon />
+            <div className="relative">
+                <ComingSoon />
+            </div>
             <Footer />
         </>
     )
