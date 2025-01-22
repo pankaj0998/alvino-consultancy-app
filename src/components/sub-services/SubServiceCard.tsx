@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CardProps } from "./SubServiceCard.types";
-import businessImage from '/images/tax-regulatory/business-tax.png'
+import businessImage from '/images/business-tax.png'
 
 const SubServiceCard: React.FC<CardProps> = ({ image, title, description, cardData = [], toggler, isButtonRequired = false }) => {
     const [showMore, setShowMore] = useState(false);
