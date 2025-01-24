@@ -9,6 +9,7 @@ import AssurancePage from "./pages/sub-pages/Assurance";
 import { urls } from "./links/url";
 import ContactUs from "./pages/ContactUs";
 import ComingSoonPage from "./pages/ComingSoonPage";
+import ApplicationForm from "./components/application-form/ApplicationForm";
 
 export default function App() {
   return (

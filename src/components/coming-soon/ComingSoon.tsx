@@ -6,7 +6,7 @@ const ComingSoon = () => {
             {/* Component Code */}
 
             <div
-                className="relative h-screen w-full flex items-center justify-center bg-cover bg-center text-center"
+                className="h-screen w-full flex items-center justify-center bg-cover bg-center text-center"
                 style={{ backgroundImage: "url(https://images.pexels.com/photos/260689/pexels-photo-260689.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)" }}
             >
                 <div className="absolute top-0 right-0 bottom-0 left-0 bg-gray-900 opacity-75"></div>
