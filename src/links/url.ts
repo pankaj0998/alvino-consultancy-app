@@ -6,6 +6,7 @@ export const urls = {
     advisoryService: '/services/advisory-services',
     transactionDealService: '/services/transaction-deals',
     assuranceService: '/services/assurance-services',
+    career: '/career',
     contactUs: '/contact-us',
     comingSoon: '/coming-soon',
     rbi: 'https://www.rbi.org.in/',

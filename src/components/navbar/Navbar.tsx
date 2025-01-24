@@ -96,7 +96,7 @@ const Navbar = () => {
             ]
         },
         { name: 'Insights', link: urls.comingSoon },
-        { name: 'Careers', link: urls.comingSoon },
+        { name: 'Careers', link: urls.career },
         { name: 'Contact Us', link: urls.contactUs }
     ];
 
