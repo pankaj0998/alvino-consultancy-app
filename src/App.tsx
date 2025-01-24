@@ -9,6 +9,7 @@ import AssurancePage from "./pages/sub-pages/Assurance";
 import { urls } from "./links/url";
 import ContactUs from "./pages/ContactUs";
 import ComingSoonPage from "./pages/ComingSoonPage";
+import CareerPage from "./pages/CareerPage";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Route path={urls.transactionDealService} element={<TransactionDeals />} />
         <Route path={urls.assuranceService} element={<AssurancePage />} />
         <Route path={urls.comingSoon} element={<ComingSoonPage />} />
+        <Route path={urls.career} element={<CareerPage />} />
       </Routes>
     </BrowserRouter >
   );
