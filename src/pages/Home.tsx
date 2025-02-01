@@ -4,6 +4,7 @@ import { heroSection } from "../components/hero/hero-section"
 import Navbar from "../components/navbar/Navbar"
 import { callbackform } from "../components/request-banner/request-banner"
 import RequestBanner from "../components/request-banner/RequestBanner"
+import ScrollToTop from "../components/scroll-to-top/ScrollToTop"
 
 const HomePage = () => {
     return (
@@ -15,6 +16,7 @@ const HomePage = () => {
             <HeroSection {...heroSection} />
             <RequestBanner {...callbackform} />
             <Footer />
+            <ScrollToTop />
         </div>
     )
 }
