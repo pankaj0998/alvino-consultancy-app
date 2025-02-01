@@ -10,10 +10,12 @@ import { urls } from "./links/url";
 import ContactUs from "./pages/ContactUs";
 import ComingSoonPage from "./pages/ComingSoonPage";
 import CareerPage from "./pages/CareerPage";
+import ScrollToTop from "./components/scroll-to-top/ScrollToTop";
 
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path={urls.home} element={<HomePage />} />
         <Route path={urls.aboutus} element={<AboutUs />} />
