@@ -49,7 +49,22 @@ const Navbar = () => {
 
     const menuItems = [
         { name: 'Home', link: urls.home },
-        { name: 'About Us', link: urls.aboutus },
+        {
+            name: 'About Us',
+            link: urls.aboutus,
+            dropdown: [
+                {
+                    name: 'Who We Are',
+                    link: `${urls.aboutus}#who-we-are`,
+                    subDropdown: []
+                },
+                {
+                    name: 'Our Team',
+                    link: `${urls.aboutus}#our-team`,
+                    subDropdown: []
+                }
+            ]
+        },
         {
             name: 'Services',
             link: urls.services,
@@ -207,7 +222,7 @@ const Navbar = () => {
                                                             toggleSubDropdown(subIndex);
                                                         }}
                                                     >
-                                                        {dropdownItem.subDropdown && (
+                                                        {dropdownItem.subDropdown && dropdownItem.subDropdown.length > 0 && (
                                                             <FaChevronRight
                                                                 className="ml-auto cursor-pointer"
                                                             />
