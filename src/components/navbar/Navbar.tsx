@@ -8,8 +8,8 @@ import { advisoryService, assuranceService, subService, transactionDealsService 
 import { urls } from '../../links/url';
 
 const Navbar = () => {
-    const [openDropdown, setOpenDropdown] = useState(null);
-    const [openSubDropdown, setOpenSubDropdown] = useState(null);
+    const [openDropdown, setOpenDropdown] = useState<any>(null);
+    const [openSubDropdown, setOpenSubDropdown] = useState<any>(null);
     const navbarRef = useRef<any>(null);
     const [nav, setNav] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
@@ -100,13 +100,13 @@ const Navbar = () => {
         { name: 'Contact Us', link: urls.contactUs }
     ];
 
-    const toggleDropdown = (index: any) => {
-        setOpenDropdown(openDropdown === index ? null : index);
+    const toggleDropdown = (index: number | null) => {
+        setOpenDropdown(index);
         setOpenSubDropdown(null);
     };
 
-    const toggleSubDropdown = (index: any) => {
-        setOpenSubDropdown(openSubDropdown === index ? null : index);
+    const toggleSubDropdown = (index: number | null) => {
+        setOpenSubDropdown(index);
     };
 
     useEffect(() => {
@@ -169,7 +169,8 @@ const Navbar = () => {
                     {/* Menu */}
                     <ul className="flex-1 lg:flex justify-end space-x-16 pr-24 hidden">
                         {menuItems.map((item, index) => (
-                            <li key={index} className="relative group">
+                            <li key={index} className="relative group" onMouseEnter={() => toggleDropdown(index)}
+                                onMouseLeave={() => toggleDropdown(null)}>
                                 <div className='flex items-center justify-center space-x-2'>
                                     <a
                                         href={item.link || '#'}
@@ -186,9 +187,10 @@ const Navbar = () => {
                                 </div>
                                 {/* Dropdown */}
                                 {item.dropdown && openDropdown === index && (
-                                    <ul className="absolute left-0 mt-5 min-w-72 bg-white shadow-lg rounded-md">
+                                    <ul className="absolute left-0 mt-1 min-w-72 bg-white shadow-lg rounded-md">
                                         {item.dropdown.map((dropdownItem, subIndex) => (
-                                            <li key={subIndex} className="hover:text-blue-title text-gray-description font-medium text-base relative">
+                                            <li key={subIndex} className="hover:text-blue-title text-gray-description font-medium text-base relative" onMouseEnter={() => toggleSubDropdown(subIndex)}
+                                                onMouseLeave={() => toggleSubDropdown(null)}>
                                                 <div className='flex items-center justify-between pl-8 py-2 hover:bg-blue-light'>
                                                     <a href={dropdownItem.link || "#"} className='transform transition-all duration-300 ease-in-out hover:scale-110'>
                                                         {dropdownItem.name}
