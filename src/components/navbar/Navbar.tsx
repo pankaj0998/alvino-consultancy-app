@@ -275,10 +275,15 @@ const Navbar = () => {
                                         {item.name}
                                     </a>
                                     {item.dropdown && (
-                                        <FaChevronDown
-                                            className="ml-2 cursor-pointer"
-                                            onClick={() => toggleDropdown(index)}
-                                        />
+                                        openDropdown === index ? (
+                                            <FaChevronUp
+                                                className="ml-2 cursor-pointer transition-transform duration-300"
+                                            />
+                                        ) : (
+                                            <FaChevronDown
+                                                className="ml-2 cursor-pointer transition-transform duration-300"
+                                            />
+                                        )
                                     )}
                                 </div>
                                 {/* Dropdown for Mobile */}
@@ -306,7 +311,7 @@ const Navbar = () => {
                                                     </div>
                                                 </div>
                                                 {/* Sub Dropdown for Mobile */}
-                                                {dropdownItem.subDropdown && openSubDropdown === subIndex && (
+                                                {dropdownItem.subDropdown && dropdownItem.subDropdown.length > 0 && openSubDropdown === subIndex && (
                                                     <ul className="bg-white shadow-lg rounded-md pl-4">
                                                         {dropdownItem.subDropdown.map((subItem, subSubIndex) => (
                                                             <li key={subSubIndex} className="text-gray-description px-2 py-2 hover:text-blue-title truncate cursor-pointer" onClick={(e) => {
