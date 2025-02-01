@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { FaChevronDown, FaChevronRight, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { FaChevronDown, FaChevronRight, FaPhoneAlt, FaEnvelope, FaChevronUp } from 'react-icons/fa';
 import logo from "/images/logo.png"
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Modal from '../modal/Modal';
@@ -179,10 +179,15 @@ const Navbar = () => {
                                         {item.name}
                                     </a>
                                     {item.dropdown && (
-                                        <FaChevronDown
-                                            className="ml-2 cursor-pointer"
-                                            onClick={() => toggleDropdown(index)}
-                                        />
+                                        openDropdown === index ? (
+                                            <FaChevronUp
+                                                className="ml-2 cursor-pointer transition-transform duration-300"
+                                            />
+                                        ) : (
+                                            <FaChevronDown
+                                                className="ml-2 cursor-pointer transition-transform duration-300"
+                                            />
+                                        )
                                     )}
                                 </div>
                                 {/* Dropdown */}
