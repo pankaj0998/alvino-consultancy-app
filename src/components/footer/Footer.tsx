@@ -66,8 +66,7 @@ export const Footer: React.FC = () => {
                                 <FaMapMarkerAlt size={20} />
                             </span>
                             <span className="text-gray-description text-sm">
-                                Akshya Nagar 1st Block 1st Cross, <br />
-                                Ramamurthy Nagar, Mumbai-400 001
+                                135/136-A, Mittal Court, Nariman Point, Mumbai – 400021
                             </span>
                         </div>
                     </div>
