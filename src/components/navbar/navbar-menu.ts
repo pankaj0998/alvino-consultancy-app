@@ -2,7 +2,7 @@ export enum TaxAndRegulatory {
     BTRC = "Business Tax & Regulatory Compliance",
     IO = "India Inbound & Outbound",
     TPCBA = "Transfer Pricing & Cross-Border Advisory",
-    ITS = "Indirect Tax & Gst",
+    ITS = "GST",
     LSTD = "Litigation Support & Tax Disputes",
     TMS = "Tax Managed Services"
 }

@@ -1,5 +1,5 @@
 import { SubBannerTypeProps } from "./SubBanner.types";
-import subBannerImage from '/images/sub-banner.png';
+import subBannerImage from '/images/sub-banner.jpg';
 import linerImage from '/images/liner.png'
 
 export const services: SubBannerTypeProps = {

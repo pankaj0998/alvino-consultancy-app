@@ -1,4 +1,4 @@
-import subBannerImage from '/images/sub-banner.png';
+import subBannerImage from '/images/sub-banner.jpg';
 import linerImage from '/images/liner.png'
 import { SubBannerTypeProps } from './SubBanner.types';
 import { DropDown } from '../navbar/navbar-menu';

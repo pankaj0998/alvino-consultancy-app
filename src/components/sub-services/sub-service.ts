@@ -45,17 +45,18 @@ export const subService: CardProps[] = [
         isButtonRequired: false
     },
     {
+        image: indirectImage,
+        title: TaxAndRegulatory.ITS,
+        description: "The GST regime has transformed India’s indirect tax landscape, requiring businesses to navigate a dynamic regulatory environment. Alvino Consultancy",
+        isButtonRequired: false
+    },
+    {
         image: lititgationImage,
         title: TaxAndRegulatory.LSTD,
         description: "Handling tax disputes can be a complex and time-consuming process for businesses. At Alvino Consultancy, we provide expert litigation support to businesses involved in disputes with Indian tax authorities. We represent clients at various stages of litigation, from audits and assessments to appellate proceedings and court hearings. Our team works closely with clients to develop effective strategies for resolving disputes, which may include settlement negotiations, applying for tax amnesty schemes, and recovering pending tax refunds. We also offer support in handling disputes related to transfer pricing, GST, and other indirect taxes. Our goal is to ensure that businesses navigate the legal landscape effectively, minimizing risks and securing favourable outcomes.",
         isButtonRequired: false
     },
-    {
-        image: indirectImage,
-        title: TaxAndRegulatory.ITS,
-        description: "GST regime in India has redefined the indirect tax landscape, requiring businesses to stay compliant with constantly evolving regulations. We provide end-to-end services for GST compliance, including registration, return filings, managing audits, and advisory on tax exemptions and trade incentives. Our team helps businesses understand and implement GST on various transactions, such as sales, imports, and exports, ensuring that the correct tax rate is applied and that the company claims all eligible input tax credits. We also assist in classification of goods and services to ensure correct treatment under GST, minimizing exposure to penalties and disputes. Additionally, we advise clients on navigating the intricacies of state-specific GST regulations, providing them with the tools necessary for seamless operations across India.",
-        isButtonRequired: false
-    },
+
     {
         image: taxManagedImage,
         title: TaxAndRegulatory.TMS,

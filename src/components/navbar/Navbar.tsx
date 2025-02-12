@@ -266,11 +266,10 @@ const Navbar = () => {
                     <ul className={nav ? 'fixed left-0 top-16 w-[50%] h-full border-r border-r-gray-custom bg-white ease-in-out duration-500' : 'ease-in-out duration-500 fixed left-[-100%] top-[136px]'}>
                         {menuItems.map((item, index) => (
                             <li key={index} className="relative group">
-                                <div className='flex items-center justify-between p-4'>
+                                <div className='flex items-center justify-between p-4' onClick={() => toggleDropdown(index)}>
                                     <a
                                         href={item.link || '#'}
                                         className="text-gray-description font-semibold"
-                                        onClick={() => toggleDropdown(index)} // Toggle dropdown for mobile
                                     >
                                         {item.name}
                                     </a>
@@ -287,47 +286,48 @@ const Navbar = () => {
                                     )}
                                 </div>
                                 {/* Dropdown for Mobile */}
-                                {item.dropdown && openDropdown === index && (
-                                    <ul className="bg-white shadow-lg rounded-md pl-4 pr-4">
-                                        {item.dropdown.map((dropdownItem, subIndex) => (
-                                            <li key={subIndex} className="relative">
-                                                <div className='flex items-center justify-between py-2 hover:bg-blue-light'>
-                                                    <a
-                                                        href={dropdownItem.link || "#"}
-                                                        className="text-gray-description font-normal text-base"
-                                                    >
-                                                        {dropdownItem.name}
-                                                    </a>
-                                                    <div
-                                                        className="px-2 flex items-center cursor-pointer"
-                                                        onClick={(e) => {
-                                                            e.stopPropagation();
-                                                            toggleSubDropdown(subIndex);
-                                                        }}
-                                                    >
-                                                        {dropdownItem.subDropdown && (
-                                                            <FaChevronRight className="ml-auto cursor-pointer" />
-                                                        )}
+                                {
+                                    item.dropdown && openDropdown === index && (
+                                        <ul className="bg-white shadow-lg rounded-md pl-4 pr-4">
+                                            {item.dropdown.map((dropdownItem, subIndex) => (
+                                                <li key={subIndex} className="relative">
+                                                    <div className='flex items-center justify-between py-2 hover:bg-blue-light' onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        toggleSubDropdown(subIndex);
+                                                    }}>
+                                                        <a
+                                                            href={dropdownItem.link || "#"}
+                                                            className="text-gray-description font-normal text-base"
+                                                        >
+                                                            {dropdownItem.name}
+                                                        </a>
+                                                        <div
+                                                            className="px-2 flex items-center cursor-pointer"
+                                                        >
+                                                            {dropdownItem.subDropdown && dropdownItem.subDropdown.length > 0 && (
+                                                                <FaChevronRight className="ml-auto cursor-pointer" />
+                                                            )}
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                {/* Sub Dropdown for Mobile */}
-                                                {dropdownItem.subDropdown && dropdownItem.subDropdown.length > 0 && openSubDropdown === subIndex && (
-                                                    <ul className="bg-white shadow-lg rounded-md pl-4">
-                                                        {dropdownItem.subDropdown.map((subItem, subSubIndex) => (
-                                                            <li key={subSubIndex} className="text-gray-description px-2 py-2 hover:text-blue-title truncate cursor-pointer" onClick={(e) => {
-                                                                e.stopPropagation();
-                                                                toggleModal();
-                                                                handleSubDropdownClick(subItem.name, dropdownItem.name);
-                                                            }}>
-                                                                {subItem.name}
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                )}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
+                                                    {/* Sub Dropdown for Mobile */}
+                                                    {dropdownItem.subDropdown && dropdownItem.subDropdown.length > 0 && openSubDropdown === subIndex && (
+                                                        <ul className="bg-white shadow-lg rounded-md pl-4">
+                                                            {dropdownItem.subDropdown.map((subItem, subSubIndex) => (
+                                                                <li key={subSubIndex} className="text-gray-description px-2 py-2 hover:text-blue-title truncate cursor-pointer">
+                                                                    <div onClick={(e) => {
+                                                                        e.stopPropagation();
+                                                                        toggleModal();
+                                                                        handleSubDropdownClick(subItem.name, dropdownItem.name);
+                                                                    }}>{subItem.name}</div>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )
+                                }
                             </li>
                         ))}
                     </ul>
