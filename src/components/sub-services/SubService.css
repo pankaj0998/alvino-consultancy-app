@@ -5,3 +5,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.list ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+}

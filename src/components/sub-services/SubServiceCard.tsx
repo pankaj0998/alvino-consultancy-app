@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CardProps } from "./SubServiceCard.types";
 import businessImage from '/images/business-tax.png'
+import './SubService.css'
 
 const SubServiceCard: React.FC<CardProps> = ({ image, title, description, cardData = [], toggler, isButtonRequired = false }) => {
     const [showMore, setShowMore] = useState(false);
@@ -16,7 +17,7 @@ const SubServiceCard: React.FC<CardProps> = ({ image, title, description, cardDa
 
                 {/* Optional Description */}
                 {description && (
-                    <p className="text-gray-description mb-4 max-[600px]:text-[12px]">{description ?? "Description"}</p>
+                    <div className="text-gray-description list mb-4 md:text-[14px]" dangerouslySetInnerHTML={{ __html: description ?? "Description" }}></div>
                 )}
 
                 {/* Subtitle and SubDescription */}
@@ -25,11 +26,14 @@ const SubServiceCard: React.FC<CardProps> = ({ image, title, description, cardDa
                         <h3 className="font-semibold text-gray-800 mb-1 max-[600px]:text-[14px]">
                             {index + 1}. {data.subtitle ?? "SubTitle"}
                         </h3>
-                        <p className="text-gray-description max-[600px]:text-[12px]">
-                            {showMore || index === 0
-                                ? (data.subDescription ?? "SubDescription")
-                                : null}
-                        </p>
+                        <div
+                            className="text-gray-description md:text-[14px] list"
+                            dangerouslySetInnerHTML={{
+                                __html: showMore || index === 0
+                                    ? cardData[index].subDescription ?? "SubDescription"
+                                    : "",
+                            }}
+                        ></div>
                     </div>
                 ))}
 

@@ -1,12 +1,12 @@
 export type CardData = {
     subtitle: string;
-    subDescription: string;
+    subDescription: any;
 }
 
 export type CardProps = {
     image: string;
     title: string;
-    description?: string;
+    description?: any;
     cardData?: CardData[];
     isButtonRequired?: boolean,
     toggler?: () => void;
@@ -16,7 +16,7 @@ export type CardProps = {
 export type SubServiceProps = {
     image: string;
     title: string;
-    description?: string;
+    description?: any;
     cardData?: CardData[];
 }
 
