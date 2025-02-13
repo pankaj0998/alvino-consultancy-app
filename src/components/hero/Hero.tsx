@@ -2,7 +2,6 @@ import React from "react";
 import { HeroSectionProps } from './Hero.types';
 import { useNavigate } from 'react-router-dom';
 import Landing from '/images/landingPage.png';
-import { ReactTyped } from "react-typed";
 
 const HeroSection: React.FC<HeroSectionProps> = ({ heading, description, buttonText, route }) => {
     const navigate = useNavigate();
@@ -21,7 +20,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heading, description, buttonT
 
                     {/* Title */}
                     <h1 className="mt-6 text-4xl font-bold sm:text-5xl md:text-6xl leading-tight">
-                        Alvino <ReactTyped strings={[heading]} typeSpeed={120} backSpeed={100} loop showCursor={false} />
+                        {heading}
                     </h1>
 
 
