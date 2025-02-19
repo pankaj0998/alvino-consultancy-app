@@ -6,6 +6,7 @@ import Modal from '../modal/Modal';
 import { Advisory, Assurance, DropDown, TaxAndRegulatory, TransactionDeals } from './navbar-menu';
 import { advisoryService, assuranceService, subService, transactionDealsService } from '../sub-services/sub-service';
 import { urls } from '../../links/url';
+import './Navbar.css'
 
 const Navbar = () => {
     const [openDropdown, setOpenDropdown] = useState<any>(null);
@@ -168,7 +169,7 @@ const Navbar = () => {
                         <FaPhoneAlt />
                         <span>+91 82453 2652</span>
                     </div> */}
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center space-x-2 navbar">
                         <FaEnvelope />
                         <span>info@alvinoconsultancy.com</span>
                     </div>
@@ -176,7 +177,7 @@ const Navbar = () => {
             </div>
 
             {/* Navbar */}
-            <div className="lg:sticky top-0 z-50 bg-white shadow-md fixed w-full">
+            <div className="lg:sticky top-0 z-50 bg-white shadow-md fixed w-full navbar">
                 <div className="flex justify-between items-center px-6 py-4">
                     {/* Logo */}
                     <a href="/"><img src={logo} alt="Logo" /></a>

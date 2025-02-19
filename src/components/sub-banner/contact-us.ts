@@ -4,7 +4,7 @@ import linerImage from '/images/liner.png'
 
 export const contactUs: SubBannerTypeProps = {
     title: "Contact Us",
-    description: "Our assurance services help businesses enhance transparency, meet regulatory requirements, and build stakeholder confidence through accurate and timely financial reporting and auditing.",
+    description: "We align strategies with purpose. Get in touch to see how our expertise can propel your business forward.",
     backgroundImage: subBannerImage,
     linerImageUrl: linerImage
 }
