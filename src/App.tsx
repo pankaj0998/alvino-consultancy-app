@@ -11,6 +11,9 @@ import ContactUs from "./pages/ContactUs";
 import ComingSoonPage from "./pages/ComingSoonPage";
 import CareerPage from "./pages/CareerPage";
 import ScrollToTop from "./components/scroll-to-top/ScrollToTop";
+import Disclaimer from "./pages/Disclaimer";
+import TermsConditions from "./pages/Terms-Condition";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 export default function App() {
   return (
@@ -27,6 +30,9 @@ export default function App() {
         <Route path={urls.assuranceService} element={<AssurancePage />} />
         <Route path={urls.comingSoon} element={<ComingSoonPage />} />
         <Route path={urls.career} element={<CareerPage />} />
+        <Route path={urls.disclaimer} element={<Disclaimer />} />
+        <Route path={urls.termsAndCond} element={<TermsConditions />} />
+        <Route path={urls.privacyPolicy} element={<PrivacyPolicy />} />
       </Routes>
     </BrowserRouter >
   );

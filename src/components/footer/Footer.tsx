@@ -102,9 +102,9 @@ export const Footer: React.FC = () => {
                 Copyright 2025 © Alvino Consultancy | All Rights Reserved
             </div>
             <div className="text-gray-description text-xs text-center mt-2">
-                <a href={urls.disclaimer} className="hover:underline">Disclaimer</a> |
-                <a href={urls.termsAndCond} className="hover:underline">Terms & Conditions</a> |
-                <a href={urls.privacyPolicy} className="hover:underline">Privacy Policy</a>
+                <a href={urls.disclaimer} className="hover:underline" target='_blank'>Disclaimer</a> |
+                <a href={urls.termsAndCond} className="hover:underline" target='_blank'>Terms & Conditions</a> |
+                <a href={urls.privacyPolicy} className="hover:underline" target='_blank'>Privacy Policy</a>
             </div>
         </footer>
     );

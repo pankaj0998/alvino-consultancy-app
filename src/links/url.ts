@@ -15,7 +15,7 @@ export const urls = {
     incomeTax: 'https://incometaxindia.gov.in/',
     dgft: 'https://www.dgft.gov.in/CP/',
     sebi: 'https://www.sebi.gov.in/',
-    disclaimer: '/',
-    termsAndCond: '/',
-    privacyPolicy: '/'
+    disclaimer: '/disclaimer/',
+    termsAndCond: '/terms-conditions/',
+    privacyPolicy: '/privacy-policy/'
 }
