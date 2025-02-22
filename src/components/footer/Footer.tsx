@@ -8,10 +8,11 @@ import React from 'react';
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { urls } from '../../links/url';
+import { FaBusinessTime } from "react-icons/fa6";
 
 export const Footer: React.FC = () => {
     return (
-        <footer className="bg-gray-custom w-full py-10">
+        <footer className="bg-gray-custom w-full pt-10 pb-5">
             {/* Footer Section */}
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 px-6 md:px-6 lg:px-10">
                 {/* Left Section */}
@@ -20,8 +21,8 @@ export const Footer: React.FC = () => {
                         <img src={footerLogo} alt="Footer Logo" className="h-15" />
                     </div>
                     <div className='flex flex-col'>
-                        <span className='text-gray-description text-sm'>Monday to Saturday</span>
-                        <span className='text-gray-description text-sm'>9.30 am - 7 pm IST</span>
+                        {/* <span className='text-gray-description text-sm'>Monday to Saturday</span> */}
+                        {/* <span className='text-gray-description text-sm'>9.30 am - 7 pm IST</span> */}
                     </div>
                 </div>
 
@@ -46,15 +47,21 @@ export const Footer: React.FC = () => {
                         </ul>
                         <ul className="space-y-2 text-gray-description text-sm">
                             <li><a href={urls.incomeTax} target='_blank' className="hover:underline">Income Tax India</a></li>
-                            <li><a href={urls.dgft} target='_blank' className="hover:underline">DGFT Gov</a></li>
-                            <li><a href={urls.sebi} target='_blank' className="hover:underline">SEBI Gov</a></li>
+                            <li><a href={urls.dgft} target='_blank' className="hover:underline">DGFT Gov.</a></li>
+                            <li><a href={urls.sebi} target='_blank' className="hover:underline">SEBI Gov.</a></li>
                         </ul>
                     </div>
                 </div>
 
                 {/* Right Section */}
-                <div className="md:col-span-3 md:pt-10">
+                <div className="md:col-span-3 ">
                     <div className="space-y-6">
+                        <div className="flex items-center space-x-4">
+                            <span className="text-gray-description">
+                                <FaBusinessTime size={20} />
+                            </span>
+                            <span className="text-gray-description text-sm">Monday to Saturday</span>
+                        </div>
                         <div className="flex items-center space-x-4">
                             <span className="text-gray-description">
                                 <FaPhoneAlt size={20} />
@@ -92,7 +99,12 @@ export const Footer: React.FC = () => {
 
             {/* Bottom Section */}
             <div className="text-gray-description text-sm text-center border-t border-gray-300 mt-8 pt-4">
-                Copyright © Alvino Consultancy | All Rights Reserved
+                Copyright 2025 © Alvino Consultancy | All Rights Reserved
+            </div>
+            <div className="text-gray-description text-xs text-center mt-2">
+                <a href={urls.disclaimer} className="hover:underline">Disclaimer</a> |
+                <a href={urls.termsAndCond} className="hover:underline">Terms & Conditions</a> |
+                <a href={urls.privacyPolicy} className="hover:underline">Privacy Policy</a>
             </div>
         </footer>
     );

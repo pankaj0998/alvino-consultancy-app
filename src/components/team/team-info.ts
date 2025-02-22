@@ -38,6 +38,6 @@ Ankur is a trusted advisor to both global enterprises and Indian businesses, bei
 
 export const teamContent: TeamInfoGridProps = {
     tagline: "Expert Team",
-    heading: "Our Core Team",
+    heading: "Core Team",
     teamInfo: teamInformation
 }

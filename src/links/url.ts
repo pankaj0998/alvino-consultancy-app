@@ -14,5 +14,8 @@ export const urls = {
     mca: 'https://www.mca.gov.in/content/mca/global/en/home.html',
     incomeTax: 'https://incometaxindia.gov.in/',
     dgft: 'https://www.dgft.gov.in/CP/',
-    sebi: 'https://www.sebi.gov.in/'
+    sebi: 'https://www.sebi.gov.in/',
+    disclaimer: '/',
+    termsAndCond: '/',
+    privacyPolicy: '/'
 }

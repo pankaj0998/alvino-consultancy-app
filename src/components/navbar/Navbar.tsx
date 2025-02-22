@@ -60,7 +60,7 @@ const Navbar = () => {
                     subDropdown: []
                 },
                 {
-                    name: 'Our Team',
+                    name: 'Core Team',
                     link: `${urls.aboutus}#our-team`,
                     subDropdown: []
                 }
@@ -171,7 +171,7 @@ const Navbar = () => {
                     </div> */}
                     <div className="flex items-center space-x-2 navbar">
                         <FaEnvelope />
-                        <span>info@alvinoconsultancy.com</span>
+                        <span>info@alvinoconsultancy.in</span>
                     </div>
                 </div>
             </div>
