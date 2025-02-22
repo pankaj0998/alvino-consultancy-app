@@ -1,5 +1,5 @@
 export type ContentProps = {
-    title: string;
+    title?: string;
     description: string;
     heading?: string
 }
