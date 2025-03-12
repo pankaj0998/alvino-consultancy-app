@@ -56,12 +56,12 @@ export const Footer: React.FC = () => {
                 {/* Right Section */}
                 <div className="md:col-span-3 ">
                     <div className="space-y-6">
-                        <div className="flex items-center space-x-4">
+                        {/* <div className="flex items-center space-x-4">
                             <span className="text-gray-description">
                                 <FaBusinessTime size={20} />
                             </span>
                             <span className="text-gray-description text-sm">Monday to Saturday</span>
-                        </div>
+                        </div> */}
                         <div className="flex items-center space-x-4">
                             <span className="text-gray-description">
                                 <FaPhoneAlt size={20} />
