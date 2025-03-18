@@ -180,7 +180,7 @@ const Navbar = () => {
             <div className="lg:sticky top-0 z-50 bg-white shadow-md fixed w-full navbar">
                 <div className="flex justify-between items-center px-6 py-4">
                     {/* Logo */}
-                    <a href="/"><img src={logo} alt="Logo" width={"50%"} /></a>
+                    <a href="/"><img src={logo} alt="Logo" /></a>
 
                     {/* Menu */}
                     <ul className="flex-1 lg:flex justify-end space-x-16 pr-24 hidden">
