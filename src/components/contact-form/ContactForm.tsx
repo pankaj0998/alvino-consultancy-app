@@ -35,22 +35,18 @@ const ContactForm: React.FC = () => {
             isValid = false;
         }
 
-        if (!formData.contact || !/^\+\d{1,3}\s\d{6,15}$/.test(formData.contact)) {
-            newErrors.contact = "Valid 10-digit contact number with country code is required.";
+        if (!formData.contact || !/^(\+\d{1,3}\s?)?\d{10}$/.test(formData.contact)) {
+            newErrors.contact = "Valid 10-digit contact number (with or without country code) is required.";
             isValid = false;
         }
 
-        if (
-            !formData.email ||
-            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(formData.email)
-        ) {
+        if (!formData.email || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(formData.email)) {
             newErrors.email = "Valid email address is required.";
             isValid = false;
         }
 
         if (!formData.message || formData.message.length > 250) {
-            newErrors.message =
-                "Message is required and should not exceed 250 characters.";
+            newErrors.message = "Message is required and should not exceed 250 characters.";
             isValid = false;
         }
 
@@ -58,11 +54,32 @@ const ContactForm: React.FC = () => {
         return isValid;
     };
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (validate()) {
-            alert("Form submitted successfully!");
-            // Add submission logic here
+            try {
+                const response = await fetch("https://alvinoconsultancy.com/contact.php", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: new URLSearchParams({
+                        fullName: formData.fullName,
+                        contact: formData.contact,
+                        email: formData.email,
+                        message: formData.message,
+                    }).toString(),
+                });
+
+                const result = await response.json();
+                alert(result.message); // Show response message
+
+                if (result.status === "success") {
+                    setFormData({ fullName: "", email: "", contact: "", message: "" }); // Reset form
+                }
+            } catch (error) {
+                alert("Error sending message. Please try again.");
+            }
         }
     };
 

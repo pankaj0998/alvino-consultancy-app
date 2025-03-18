@@ -7,7 +7,7 @@ interface FormValues {
     state: string;
     mobileNumber: string;
     emailAddress: string;
-    age: number;
+    age: string;
     gender: "Male" | "Female";
     graduation: string;
     specialisation: string;
@@ -15,10 +15,9 @@ interface FormValues {
     certification?: string;
     experienceLevel: string;
     currentOrganisation: string;
-    teamSize: number;
+    teamSize: string;
     careerAchievements?: string;
     resume: FileList;
-    idPhoto: FileList;
 }
 
 const states = [
@@ -61,8 +60,49 @@ const CareerForm: React.FC = () => {
     } = useForm<FormValues>();
 
     const [size, setSize] = useState<number>(1);
-    const onSubmit: SubmitHandler<FormValues> = (data) => {
-        console.log(data);
+    const onSubmit: SubmitHandler<FormValues> = async (data) => {
+        try {
+            const formData = new FormData();
+            formData.append("applicantName", data.applicantName);
+            formData.append("city", data.city);
+            formData.append("state", data.state);
+            formData.append("mobileNumber", data.mobileNumber);
+            formData.append("emailAddress", data.emailAddress);
+            formData.append("age", data.age);
+            formData.append("gender", data.gender);
+            formData.append("graduation", data.graduation);
+            formData.append("specialisation", data.specialisation);
+            if (data.postGraduation) formData.append("postGraduation", data.postGraduation);
+            if (data.certification) formData.append("certification", data.certification);
+            formData.append("experienceLevel", data.experienceLevel);
+            formData.append("currentOrganisation", data.currentOrganisation);
+            formData.append("teamSize", data.teamSize);
+            if (data.careerAchievements) formData.append("careerAchievements", data.careerAchievements);
+
+            // Append the resume file (only the first file is taken)
+            if (data.resume.length > 0) {
+                formData.append("resume", data.resume[0]);
+            }
+
+            const response = await fetch("https://alvinoconsultancy.com/career.php", {
+                method: "POST",
+                body: formData,
+            });
+
+            const contentType = response.headers.get("content-type");
+
+            let result;
+            if (contentType && contentType.includes("application/json")) {
+                result = await response.json();
+            } else {
+                result = await response.text(); // Fallback for plain text/HTML response
+            }
+
+            alert(result.message);
+        } catch (error) {
+            console.log(error)
+            alert("Error submitting application. Please try again.");
+        }
     };
 
     const handleBlurSize = () => {
