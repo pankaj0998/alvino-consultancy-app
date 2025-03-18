@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
                 {/* Left Section */}
                 <div className="md:col-span-4 flex flex-col">
                     <div className="flex items-center mb-4">
-                        <img src={footerLogo} alt="Footer Logo" className="h-15" />
+                        <img src={footerLogo} alt="Footer Logo" className="h-14" />
                     </div>
                     <div className='flex flex-col'>
                         {/* <span className='text-gray-description text-sm'>Monday to Saturday</span> */}
