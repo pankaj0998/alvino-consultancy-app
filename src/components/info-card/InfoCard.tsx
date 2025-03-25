@@ -44,17 +44,24 @@ const InfoCard: React.FC<InfoCardTypeProps> = ({ name, position, image, socialMe
 
             {/* Social Media Links */}
             <div className="flex justify-center space-x-5 mt-4">
-                {socialMedia.map((item, index) => (
-                    <a
-                        key={index}
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-custom hover:text-blue-500 text-2xl"
-                    >
-                        {renderIcon(item.type)}
-                    </a>
-                ))}
+                {socialMedia.map((item, index) => {
+                    const href =
+                        item.type === SocialMedia.GMAIL
+                            ? `mailto:${item.url || "info@alvinoconsultancy.in"}`
+                            : item.url;
+
+                    return (
+                        <a
+                            key={index}
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-custom hover:text-blue-500 text-2xl"
+                        >
+                            {renderIcon(item.type)}
+                        </a>
+                    );
+                })}
             </div>
         </div>
     );

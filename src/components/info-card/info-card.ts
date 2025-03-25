@@ -8,11 +8,11 @@ export const ankurShahInfo: InfoCardTypeProps = {
     socialMedia: [
         {
             type: SocialMedia.GMAIL,
-            url: ""
+            url: "ankur.shah@alvinoconsultancy.in"
         },
         {
             type: SocialMedia.LINKEDIN,
-            url: ""
+            url: "http://www.linkedin.com/in/ankur-shah-02b584121"
         }
     ]
 }
@@ -24,7 +24,7 @@ export const bhaveshMehtaInfo: InfoCardTypeProps = {
     socialMedia: [
         {
             type: SocialMedia.GMAIL,
-            url: ""
+            url: "bhavesh.mehta@alvinoconsultancy.in"
         },
         {
             type: SocialMedia.LINKEDIN,
@@ -40,7 +40,7 @@ export const vinayBindalInfo: InfoCardTypeProps = {
     socialMedia: [
         {
             type: SocialMedia.GMAIL,
-            url: ""
+            url: "vinay.bindal@alvinoconsultancy.in"
         },
         {
             type: SocialMedia.LINKEDIN,
