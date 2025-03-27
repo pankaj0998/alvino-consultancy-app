@@ -30,16 +30,16 @@ const InfoCard: React.FC<InfoCardTypeProps> = ({ name, position, image, socialMe
                     backgroundPosition: "center",
                 }} >
 
-                <div className="relative p-6 flex items-center">
-                    {/* Vertical Divider */}
-                    <div className="w-1 h-12 bg-white rounded-full"></div>
+                {/* <div className="relative p-6 flex items-center"> */}
+                {/* Vertical Divider */}
+                {/* <div className="w-1 h-12 bg-white rounded-full"></div> */}
 
-                    {/* Name and Position */}
-                    <div className="ml-3">
-                        <h3 className="text-lg font-bold text-white">{name}</h3>
-                        <p className="text-sm text-blue-light">{position}</p>
-                    </div>
-                </div>
+                {/* Name and Position */}
+                {/* <div className="ml-3"> */}
+                {/* <h3 className="text-lg font-bold text-white">{name}</h3>
+                        <p className="text-sm text-blue-light">{position}</p> */}
+                {/* </div> */}
+                {/* </div> */}
             </div>
 
             {/* Social Media Links */}

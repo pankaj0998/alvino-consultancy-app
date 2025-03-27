@@ -1,5 +1,7 @@
 import { InfoCardTypeProps, SocialMedia } from "./InforCard.types";
 import ankurShah from '/images/team/ankur-shah.png'
+import bhaveshMehta from '/images/team/bhavesh-mehta.png'
+import vinayBindal from '/images/team/vinay-bindal.png'
 
 export const ankurShahInfo: InfoCardTypeProps = {
     name: "Ankur Shah",
@@ -20,7 +22,7 @@ export const ankurShahInfo: InfoCardTypeProps = {
 export const bhaveshMehtaInfo: InfoCardTypeProps = {
     name: "Bhavesh Mehta",
     position: "",
-    image: ankurShah,
+    image: bhaveshMehta,
     socialMedia: [
         {
             type: SocialMedia.GMAIL,
@@ -36,7 +38,7 @@ export const bhaveshMehtaInfo: InfoCardTypeProps = {
 export const vinayBindalInfo: InfoCardTypeProps = {
     name: "Vinay Bindal",
     position: "",
-    image: ankurShah,
+    image: vinayBindal,
     socialMedia: [
         {
             type: SocialMedia.GMAIL,
