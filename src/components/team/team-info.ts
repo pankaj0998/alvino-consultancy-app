@@ -5,23 +5,39 @@ export const teamInformation: TeamInfoProps[] = [
     {
         info: ankurShahInfo,
         isAlignRight: false,
-        description: `Ankur Shah is a seasoned consulting professional with over 14 years of experience across international taxation, transfer pricing, indirect taxation (GST), business valuations, and labour law compliance. A Chartered Accountant (CA) with a Bachelor’s degree in Commerce, he brings a wealth of expertise in guiding businesses through the complexities of India’s regulatory and tax landscape.<br><br>
+        description: `Ankur Shah is a seasoned consulting professional with over 14 years of experience in international taxation, transfer pricing, indirect taxation (GST), and business valuations. A Chartered Accountant (CA) with a Bachelor’s degree in Commerce, Ankur brings invaluable expertise to businesses navigating India’s complex regulatory and tax landscape, offering strategic insights and tailored solutions.<br><br>
  
-His career includes a distinguished nine-year tenure at Ernst & Young (EY), where he advised multinational corporations (MNCs) on tax-efficient structuring, cross-border investment planning, and regulatory compliance. Ankur has been instrumental in helping businesses navigate evolving tax regulations, optimize operations, and mitigate tax exposure. His expertise extends to handling Advance Pricing Agreements (APAs) for long-term tax certainty and supporting clients in high-stakes litigation before the Appellate Tribunal.<br><br>With a forward-thinking perspective, Ankur is committed to delivering value-driven solutions that empower businesses to thrive in a dynamic regulatory environment.<br><br>
+His career includes a distinguished 9-year tenure at Ernst & Young (EY), where he advised multinational corporations (MNCs) on tax-efficient structuring, cross-border investment planning, and regulatory compliance. Ankur has been instrumental in helping businesses adapt to evolving tax regulations, optimize operations, and manage tax exposure. His experience also extends to handling Advance Pricing Agreements (APAs) for long-term tax certainty and representing clients in critical litigation before the Appellate Tribunal.<br><br>
  
-Ankur is a trusted advisor to both global enterprises and Indian businesses, being recognized for his strategic insights and practical solutions. His core areas of expertise include:<br>
+For Alvino Consultancy, Ankur plays a strategic advisory role, helping businesses make informed decisions around tax structuring, compliance, and operational efficiency. His approach combines in-depth knowledge with practical, value-driven solutions that enable businesses to thrive in a dynamic regulatory environment.<br><br>
+Ankur’s core areas of expertise include:<br>
 `,
-        listItems: [`Transfer Pricing: Compliance, strategic optimization, litigation support and managing APA cases.`, "Cross-Border Taxation: Structuring for India inbound and/ or outbound market entry, providing end-to-end support.", "Indirect Tax (GST): Compliance, advisory and litigation support.", "Business Valuation: Valuations for M&A and strategic decisions.", "Labour Law: Compliance and advisory services.", "Incentives Advisory: Assisting clients in obtaining government incentives and tax benefits.", "Equity & Debt Financing: Advising and supporting start-ups / businesses seeking finance"]
+        listItems: [
+            `<strong>Transfer Pricing:</strong> Compliance, strategic optimization, litigation support, and APA management.`,
+            "<strong>Indirect Tax (GST):</strong> Compliance, advisory, and litigation support.",
+            "<strong>Cross-Border Taxation:</strong> Structuring for inbound and outbound market entry, offering comprehensive support.",
+            "<strong>Incentives Advisory:</strong> Helping clients navigate and secure government incentives and tax benefits.",
+            "<strong>Business Valuation:</strong> Conducting valuations for M&A and strategic decision-making.",
+            "<strong>Equity & Debt Financing:</strong> Advising and supporting start-ups / businesses seeking finance"
+        ]
     },
     {
         info: bhaveshMehtaInfo,
         isAlignRight: true,
-        description: `Bhavesh Mehta is a distinguished consulting professional with over 14 years of expertise in corporate tax advisory, mergers & acquisitions (M&A), international taxation, cross-border investments, business valuations, and assurance advisory. A Chartered Accountant (CA) and a Bachelor of Commerce graduate, Bhavesh has a proven track record of advising leading multinational corporations on complex tax and regulatory matters, with a sharp focus on optimizing business tax structures and ensuring long-term tax efficiency.
-<br><br>With a deep understanding of India’s intricate tax and regulatory landscape, Bhavesh has successfully helped corporate clients streamline tax functions, enhance operational efficiency, and navigate industry-specific compliance requirements. His career includes over nine years with esteemed firms such as Economic Laws Practice (ELP) and BDO India, where he advised on high-profile M&A transactions, tax disputes, and regulatory compliance. Bhavesh has also represented clients before tax authorities up to the Appellate Tribunal, reinforcing his reputation as a trusted advocate in complex tax matters.
-<br><br>With a meticulous approach, Bhavesh is committed to delivering value-driven solutions that empower businesses to navigate complexities, optimize tax positions, and drive sustainable success.
-<br><br>Recognized for his strategic insights, technical analysis and pragmatic solutions, Bhavesh serves as a trusted advisor to businesses seeking sustainable growth and tax optimization. His core areas of expertise include:
+        description: `Bhavesh Mehta is a distinguished consulting professional with over 14 years of expertise in corporate tax advisory, mergers & acquisitions (M&A), international taxation, cross-border investments, business valuations, and assurance advisory. A Chartered Accountant (CA) and a Bachelor of Commerce graduate, Bhavesh has built a reputation for advising leading multinational corporations on complex tax and regulatory matters, with a strong focus on optimizing business tax structures and ensuring long-term tax efficiency.
+<br><br>With a deep understanding of India’s intricate tax and regulatory landscape, Bhavesh has consistently helped corporate clients streamline tax functions, enhance operational efficiency, and navigate industry-specific compliance requirements. His career includes over nine years with respected firms such as Economic Laws Practice (ELP) and BDO India, where he provided strategic guidance on high-profile M&A transactions, tax disputes, and regulatory compliance. Bhavesh has also represented clients before tax authorities up to the Appellate Tribunal, further cementing his reputation as a trusted advocate in complex tax matters.
+<br><br>For Alvino Consultancy, Bhavesh plays a key advisory role, providing strategic counsel on a range of tax and business challenges. His approach blends in-depth technical knowledge with practical solutions that empower businesses to optimize their tax positions, navigate regulatory complexities, and achieve sustainable growth.
+<br><br>Bhavesh’s core areas of expertise include:
 `,
-        listItems: ["Corporate Tax Advisory: Structuring efficient tax solutions for businesses.", "Cross-Border Taxation: Optimizing tax strategies for global operations.", "M&A & Business Valuation: Advising on tax aspects of mergers, acquisitions, and valuations.", "Assurance & Compliance: Providing strategic advisory for transparency and compliance.", "Wealth Management: Tailored solutions for personal wealth and family estates.", "Equity & Debt Financing: Structuring capital solutions for growth."]
+        subDescription: `<br>Through his advisory role at Alvino Consultancy, Bhavesh is recognized for delivering value-driven solutions that help businesses optimize their tax positions and navigate the complexities of a dynamic regulatory environment.`,
+        listItems: [
+            "<strong>Corporate Tax Advisory:</strong> Structuring efficient tax solutions for businesses.",
+            "<strong>Cross-Border Taxation:</strong> Optimizing tax strategies for global operations.",
+            "<strong>M&A & Business Valuation:</strong> Advising on tax aspects of mergers, acquisitions, and valuations.",
+            "<strong>Assurance & Compliance:</strong> Providing strategic advisory for transparency and compliance.",
+            "<strong>Wealth Management:</strong> Tailored solutions for personal wealth and family estates.",
+            "<strong>Equity & Debt Financing:</strong> Structuring capital solutions for growth."
+        ]
     },
     {
         info: vinayBindalInfo,

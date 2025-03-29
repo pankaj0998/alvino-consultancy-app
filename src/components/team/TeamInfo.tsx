@@ -2,7 +2,7 @@ import React from "react";
 import { TeamInfoProps } from "./TeamInfo.types";
 import InfoCard from "../info-card/InfoCard";
 
-const TeamInfo: React.FC<TeamInfoProps> = ({ info, description, isAlignRight = false, listItems }) => {
+const TeamInfo: React.FC<TeamInfoProps> = ({ info, description, isAlignRight = false, listItems, subDescription }) => {
     return (
         <div
             className={`grid grid-cols-1 lg:grid-cols-12 gap-3 md:gap-6 items-start lg:px-10 pb-20 `}
@@ -19,10 +19,11 @@ const TeamInfo: React.FC<TeamInfoProps> = ({ info, description, isAlignRight = f
                 {listItems && listItems.length > 0 && (
                     <ul className="list-disc ml-5 md:px-10">
                         {listItems.map((item, index) => (
-                            <li key={index} className="text-gray-description">{item}</li>
+                            <li key={index} className="text-gray-description" dangerouslySetInnerHTML={{ __html: item }}></li>
                         ))}
                     </ul>
                 )}
+                {subDescription && <p className="text-gray-description md:text-base leading-6 md:px-10" dangerouslySetInnerHTML={{ __html: subDescription }}></p>}
             </div>
         </div>
     );

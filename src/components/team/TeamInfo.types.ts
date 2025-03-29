@@ -3,6 +3,7 @@ import { InfoCardTypeProps } from "../info-card/InforCard.types"
 export type TeamInfoProps = {
     info: InfoCardTypeProps,
     description: string;
+    subDescription?: string;
     isAlignRight: boolean;
     listItems: Array<string>
 }

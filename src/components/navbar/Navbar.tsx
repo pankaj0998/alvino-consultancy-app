@@ -190,7 +190,11 @@ const Navbar = () => {
                                 <div className='flex items-center justify-center space-x-2'>
                                     <a
                                         href={item.link || '#'}
-                                        className="hover:text-blue-title flex items-center text-gray-description font-semibold transform transition-all duration-300 ease-in-out hover:scale-125" // Add zoom effect on hover
+                                        className={`hover:text-blue-title flex items-center font-semibold transform transition-all duration-300 ease-in-out hover:scale-125 ${location.pathname === item.link ||
+                                            (item.link === "/services" && location.pathname.startsWith("/services"))
+                                            ? "text-blue-title"
+                                            : "text-gray-description"
+                                            }`} // Add zoom effect on hover
                                     >
                                         {item.name}
                                     </a>
@@ -208,12 +212,12 @@ const Navbar = () => {
                                 </div>
                                 {/* Dropdown */}
                                 {item.dropdown && openDropdown === index && (
-                                    <ul className="absolute left-0 mt-1 min-w-72 bg-white shadow-lg rounded-md">
+                                    <ul className="absolute left-0 mt-1 min-w-72 bg-white shadow-lg rounded-md group-hover:block">
                                         {item.dropdown.map((dropdownItem, subIndex) => (
                                             <li key={subIndex} className="hover:text-blue-title text-gray-description font-medium text-base relative" onMouseEnter={() => toggleSubDropdown(subIndex)}
                                                 onMouseLeave={() => toggleSubDropdown(null)}>
                                                 <div className='flex items-center justify-between pl-8 py-2 hover:bg-blue-light'>
-                                                    <a href={dropdownItem.link || "#"} className='transform transition-all duration-300 ease-in-out hover:scale-110'>
+                                                    <a href={dropdownItem.link || "#"} className={`transform transition-all duration-300 ease-in-out hover:scale-110 ${location.pathname === dropdownItem.link ? "text-blue-title" : "text-gray-description"}`}>
                                                         {dropdownItem.name}
                                                     </a>
                                                     <div
