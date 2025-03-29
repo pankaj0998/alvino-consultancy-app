@@ -6,9 +6,7 @@ export const teamInformation: TeamInfoProps[] = [
         info: ankurShahInfo,
         isAlignRight: false,
         description: `Ankur Shah is a seasoned consulting professional with over 14 years of experience in international taxation, transfer pricing, indirect taxation (GST), and business valuations. A Chartered Accountant (CA) with a Bachelor’s degree in Commerce, Ankur brings invaluable expertise to businesses navigating India’s complex regulatory and tax landscape, offering strategic insights and tailored solutions.<br><br>
- 
 His career includes a distinguished 9-year tenure at Ernst & Young (EY), where he advised multinational corporations (MNCs) on tax-efficient structuring, cross-border investment planning, and regulatory compliance. Ankur has been instrumental in helping businesses adapt to evolving tax regulations, optimize operations, and manage tax exposure. His experience also extends to handling Advance Pricing Agreements (APAs) for long-term tax certainty and representing clients in critical litigation before the Appellate Tribunal.<br><br>
- 
 For Alvino Consultancy, Ankur plays a strategic advisory role, helping businesses make informed decisions around tax structuring, compliance, and operational efficiency. His approach combines in-depth knowledge with practical, value-driven solutions that enable businesses to thrive in a dynamic regulatory environment.<br><br>
 Ankur’s core areas of expertise include:<br>
 `,
