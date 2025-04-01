@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
         e.preventDefault();
         if (validate()) {
             try {
-                const response = await fetch("https://alvinoconsultancy.com/contact.php", {
+                const response = await fetch("https://alvinoconsultancy.in/contact.php", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded",

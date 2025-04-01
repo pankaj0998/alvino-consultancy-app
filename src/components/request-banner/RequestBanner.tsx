@@ -22,7 +22,7 @@ const RequestBanner: React.FC<RequestBannerProps> = ({ title, description }) => 
         e.preventDefault(); // Prevent page reload
 
         try {
-            const response = await fetch("https://alvinoconsultancy.com//contact.php", {
+            const response = await fetch("https://alvinoconsultancy.in//contact.php", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",

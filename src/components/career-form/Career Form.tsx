@@ -84,7 +84,7 @@ const CareerForm: React.FC = () => {
                 formData.append("resume", data.resume[0]);
             }
 
-            const response = await fetch("https://alvinoconsultancy.com/career.php", {
+            const response = await fetch("https://alvinoconsultancy.in/career.php", {
                 method: "POST",
                 body: formData,
             });

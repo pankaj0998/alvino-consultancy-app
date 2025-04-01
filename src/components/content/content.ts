@@ -43,7 +43,7 @@ export const termAndConditions: ContentProps[] = [
   <li><strong>Service</strong> refers to the Website.</li>
   <li><strong>Terms and Conditions</strong> (also referred as “Terms”) mean these Terms and Conditions that form the entire agreement between You and the Firm regarding the use of the Service.</li>
   <li><strong>Third-party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.</li>
-  <li><strong>Website</strong> refers to Alvino Consultancy LLP, accessible from <a style="color: #00127f;" href="/"><u>https://alvinoconsultancy.com/</u></a></li>
+  <li><strong>Website</strong> refers to Alvino Consultancy LLP, accessible from <a style="color: #00127f;" href="/"><u>https://alvinoconsultancy.in/</u></a></li>
   <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
 </ul>
         `
@@ -109,7 +109,7 @@ Some states do not allow the exclusion of implied warranties or limitation of li
 export const privacyPolicy: ContentProps[] = [
     {
         heading: "Privacy Policy",
-        description: `At Alvino Consultancy LLP, accessible from <a style="color: #00127f;" href="/"><u>https://alvinoconsultancy.com/</u></a>, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Alvino Consultancy LLP and how we use it. If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us. This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect on this website. This policy is not applicable to any information collected offline or via channels other than this website.
+        description: `At Alvino Consultancy LLP, accessible from <a style="color: #00127f;" href="/"><u>https://alvinoconsultancy.in/</u></a>, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Alvino Consultancy LLP and how we use it. If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us. This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect on this website. This policy is not applicable to any information collected offline or via channels other than this website.
 `
     },
     {
